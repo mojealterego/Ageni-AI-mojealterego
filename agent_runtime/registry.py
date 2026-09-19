@@ -39,7 +39,14 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("career-agent","CAREER AGENT","agents/portfolio_agent.py","Portfolio domain agent — planning/reasoning core."),
     AgentEntry("travel-execution-agent","TRAVEL EXECUTION AGENT","agents/portfolio_agent.py","Portfolio domain agent — planning/reasoning core."),
     AgentEntry("health-navigator","HEALTH NAVIGATOR","agents/portfolio_agent.py","Portfolio domain agent — planning/reasoning core."),
-    AgentEntry("personal-knowledge-agent","PERSONAL KNOWLEDGE AGENT","agents/portfolio_agent.py","Portfolio domain agent — planning/reasoning core.")
+    AgentEntry("personal-knowledge-agent","PERSONAL KNOWLEDGE AGENT","agents/portfolio_agent.py","Portfolio domain agent — planning/reasoning core."),
+    AgentEntry("aaa-automation-agency","AI Automation Agency Agent","agents/portfolio_agent.py","Automation-agency offer design, workflow architecture and delivery planning."),
+    AgentEntry("ai-creator-monetization","AI Creator Monetization Agent","agents/portfolio_agent.py","AI creator/persona monetization planning with consent, adult-only and platform-policy guardrails."),
+    AgentEntry("programmatic-seo","Programmatic SEO Agent","agents/portfolio_agent.py","Scalable search-content architecture, templates, quality gates and measurement."),
+    AgentEntry("faceless-video","Faceless Video Agent","agents/portfolio_agent.py","Repeatable faceless-video channel planning, production workflow and analytics."),
+    AgentEntry("micro-saas","Micro-SaaS Agent","agents/portfolio_agent.py","Micro-product discovery, MVP scope, economics, launch and retention planning."),
+    AgentEntry("ai-trading-risk","AI Trading Risk Agent","agents/portfolio_agent.py","Backtesting, scenario analysis and trading-risk evaluation without trade execution."),
+    AgentEntry("ai-freelance-ops","AI Freelance Operations Agent","agents/portfolio_agent.py","Freelance and productized-service packaging, delivery, QA and capacity planning.")
 )
 
 
