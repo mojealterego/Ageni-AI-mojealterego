@@ -124,7 +124,7 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("youth-ai-spiritual-compass","Duchowy Kompas","agents/youth-ai-spiritual-compass/agent.py","Non-dogmatic reflection, mindfulness and values clarification for young people."),
     AgentEntry("youth-ai-hype-curator","Kustosz Hype’u","agents/youth-ai-hype-curator/agent.py","Sneakers and collectibles research with authenticity, provenance and speculation guardrails."),
     AgentEntry("youth-ai-energy-regulator","Regulator Energii","agents/youth-ai-energy-regulator/agent.py","Voluntary planning for social energy, pacing, breaks and personal boundaries."),
-    AgentEntry("youth-ai-meme-historian","Archiwista Memów","agents/youth-ai-meme-historian/agent.py","Meme provenance, internet-culture context and media-literacy support."),
+    AgentEntry("youth-ai-meme-archivist","Archiwista Memów","agents/youth-ai-meme-archivist/agent.py","Meme history, provenance, internet-culture context and media-literacy support."),
     AgentEntry("youth-ai-safe-party-planner","Organizator Imprez","agents/youth-ai-safe-party-planner/agent.py","Age-appropriate, substance-free event planning with safety, accessibility and return-home safeguards."),
     AgentEntry("youth-ai-parasocial-manager","Coach Relacji AI","agents/youth-ai-parasocial-manager/agent.py","Healthy boundaries around creators, streamers and AI companions without diagnosis or dependency manipulation."),
 
