@@ -81,6 +81,12 @@ class PortfolioBatchTests(unittest.TestCase):
             "boardgame-ludology": "agents/boardgame-ludology/agent.py",
             "quality-diversity-engineer": "agents/quality-diversity-engineer/agent.py",
             "frontend-design-to-code": "agents/frontend-design-to-code/agent.py",
+            "legal-compliance-agent": "agents/legal-compliance-agent/agent.py",
+            "scientific-experiment-agent": "agents/scientific-experiment-agent/agent.py",
+            "cross-saas-orchestrator": "agents/cross-saas-orchestrator/agent.py",
+            "agent-supervisor-killswitch": "agents/agent-supervisor-killswitch/agent.py",
+            "realtime-crisis-manager": "agents/realtime-crisis-manager/agent.py",
+            "agent-evaluation-ops": "agents/agent-evaluation-ops/agent.py",
         }
         registry = {e.agent_id: e.entrypoint for e in list_agents()}
         for agent_id, entrypoint in specialized.items():
@@ -105,6 +111,12 @@ class PortfolioBatchTests(unittest.TestCase):
             "frontend-design-to-code": ("responsive", "accessibility", "validation"),
             "system-kernel-engineer": ("unsafe", "FFI", "verification"),
             "kernel-systems-engineer": ("nested virtualization", "rollback", "RAG"),
+            "legal-compliance-agent": ("citation", "claim", "provenance"),
+            "scientific-experiment-agent": ("hardware-in-the-loop", "calibration", "abort"),
+            "cross-saas-orchestrator": ("idempotency", "OAuth", "compensation"),
+            "agent-supervisor-killswitch": ("kill switch", "budget", "circuit"),
+            "realtime-crisis-manager": ("latency", "speed path", "fail-safe"),
+            "agent-evaluation-ops": ("golden", "drift", "circuit-breaker"),
         }
         registry = {e.agent_id: e.entrypoint for e in list_agents()}
         for agent_id, phrases in required.items():
