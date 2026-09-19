@@ -16,6 +16,25 @@ class AgentEntry:
 ROOT = Path(__file__).resolve().parents[1]
 
 AGENTS: tuple[AgentEntry, ...] = (
+
+    # Strategic occupational AI batch (2025–2026 report)
+    AgentEntry("investment-research","Autonomous Equity Research Analyst","agents/occupational-ai/agent.py","Public-information equity research, valuation scenarios and evidence provenance."),
+    AgentEntry("aml-compliance","AML Compliance Review Agent","agents/occupational-ai/agent.py","Transaction-alert triage, evidence mapping and compliance escalation drafting."),
+    AgentEntry("fpa-budgeting","FP&A Budgeting Agent","agents/occupational-ai/agent.py","Budget-versus-actual analysis, variance drivers and forecast support."),
+    AgentEntry("devops-sre","Autonomous DevOps / SRE Agent","agents/occupational-ai/agent.py","Alert triage, incident correlation and bounded remediation proposals."),
+    AgentEntry("qa-testing","Autonomous QA & Testing Agent","agents/occupational-ai/agent.py","Test design, regression analysis and reproducible defect reporting."),
+    AgentEntry("legacy-migration","Legacy Code Migration Agent","agents/occupational-ai/agent.py","Behavior-preserving legacy migration planning, tests and compatibility analysis."),
+    AgentEntry("contract-review","Contract Review & Redlining Agent","agents/occupational-ai/agent.py","Clause evidence extraction, playbook comparison and redline drafting."),
+    AgentEntry("regulatory-watch","Regulatory Watchdog Agent","agents/occupational-ai/agent.py","Official-source regulatory change tracking, impact mapping and dated alerts."),
+    AgentEntry("supply-chain","Supply Chain Orchestrator Agent","agents/occupational-ai/agent.py","Supply disruption analysis, inventory impact and scenario planning."),
+    AgentEntry("procurement","Autonomous Procurement Agent","agents/occupational-ai/agent.py","Supplier comparison, sourcing analysis and purchase-order proposal drafting."),
+    AgentEntry("sdr-sales","Sales Development Representative Agent","agents/occupational-ai/agent.py","Authorized account research, qualification and outreach drafting."),
+    AgentEntry("social-media","Social Media Manager Agent","agents/occupational-ai/agent.py","Channel content planning, trend analysis and community triage."),
+    AgentEntry("customer-support","Customer Support & Dispute Agent","agents/occupational-ai/agent.py","Case triage, evidence summaries and policy-grounded remedy drafts."),
+    AgentEntry("talent-recruiter","AI Talent Scout & Recruiter","agents/occupational-ai/agent.py","Job-relevant candidate evidence mapping and recruiting workflow support."),
+    AgentEntry("employee-experience","Employee Experience & Onboarding Agent","agents/occupational-ai/agent.py","Onboarding checklists, access/equipment requests and knowledge support."),
+    AgentEntry("medical-coding","Medical Coding & Billing Agent","agents/occupational-ai/agent.py","Documented coding support, evidence linkage and payer-rule uncertainty flags."),
+
     AgentEntry("photo-general","Photo Agent","agents/photo/agent.py","Documentary photography, visual concepts, and photojournalism assistance."),
     AgentEntry("photo-specialist","Photo Specialist","agents/photo/specialist_agent.py","Profile-driven photographic prompt generation."),
     AgentEntry("millennium-mathematics","Millennium Mathematics","agents/millennium-mathematics/agent.py","Research assistance with explicit proof and validation discipline."),
