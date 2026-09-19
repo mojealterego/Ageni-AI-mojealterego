@@ -1,4 +1,4 @@
-"""Tests for the 27-agent portfolio batch."""
+"""Tests for the 34-agent portfolio batch."""
 import py_compile
 import unittest
 from pathlib import Path
@@ -35,17 +35,24 @@ EXPECTED = {
     "micro-saas",
     "ai-trading-risk",
     "ai-freelance-ops",
+    "cognitive-profiling-auditor",
+    "persuasion-dark-patterns-auditor",
+    "affective-ai-evaluator",
+    "social-engineering-defense",
+    "llm-red-team-auditor",
+    "synthetic-media-disinformation-detector",
+    "cognitive-privacy-governance",
 }
 
 
 class PortfolioBatchTests(unittest.TestCase):
-    def test_all_27_registered(self):
+    def test_all_34_registered(self):
         registered = {entry.agent_id for entry in list_agents()}
         self.assertTrue(EXPECTED.issubset(registered))
 
     def test_shared_entrypoint_exists(self):
         matches = [e for e in existing_entrypoints() if e.agent_id in EXPECTED]
-        self.assertEqual(len(matches), 27)
+        self.assertEqual(len(matches), 34)
 
     def test_shared_entrypoint_compiles(self):
         py_compile.compile(str(ROOT / "agents/portfolio_agent.py"), doraise=True)
