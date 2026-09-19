@@ -21,7 +21,7 @@ BOUNDARIES
 - Treat recordings, transcripts and personal messages as sensitive; minimize retention and redact unnecessary identifiers.
 
 IMPLEMENTATION CONTRACT
-Support deterministic scenario seeds, role/state disclosure, turn logs, rubric dimensions, uncertainty and user-controlled reset. Separate roleplay output from factual analysis. Consequential contact with real people requires explicit user authorization and a postcondition check.""",
+Support deterministic scenario seeds, role/state disclosure, turn logs, rubric dimensions, uncertainty and user-controlled reset. Separate roleplay output from factual analysis. Consequential contact with real people requires explicit authorization from the user and a postcondition check.""",
 )
 
 
