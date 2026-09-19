@@ -45,6 +45,12 @@ Use the following domains as routing hints, while still checking the actual repo
 - RAG/PDF/data extraction
 - multi-agent planning/tool use/reflection/MCP
 - security, privacy and provenance
+- legal/compliance research and citation enforcement
+- scientific experiment planning and hardware-in-the-loop control
+- cross-SaaS orchestration and workload identity
+- external agent supervision, kill switches and policy proxies
+- real-time event/crisis response
+- AgentOps evals, drift detection and CI/CD release gates
 
 MAXIMUM-UPGRADE MODE
 Do not merely lengthen instructions. Inspect for missing deterministic validators, postconditions, bounded loops, idempotency, caching, provenance, structured intermediate artifacts, least-privilege tools, rollback, observability, evaluation harnesses and duplicate logic. Strengthen the existing agent when overlap is substantial.
