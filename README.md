@@ -5,12 +5,12 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **47 agentów portfolio + 21 wyspecjalizowanych = 68 agentów w rejestrze**. Wśród wyspecjalizowanych są batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps oraz child-AI.
+- **140 agentów w rejestrze**. Wśród nich są agenty portfolio, batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps, Child AI, Adult AI oraz nowy batch Youth AI.
 - Wszyscy agenci portfolio są wykonywalni przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
 
-## 47 agentów portfolio / 68 agentów w rejestrze
+## Rdzeń portfolio i wcześniejsze agenty specjalistyczne
 
 | `agent-policy-gateway` | **Agent Policy Gateway** | Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate identity, scope, risk, data sensitivity, policy conflict, approval and audit requirements. |
 | `agent-ops-control-tower` | **Agent Ops Control Tower** | Analyze agent executions, approvals, failures, latency, model usage and cost; separate observed telemetry from inferred causes. |
@@ -88,7 +88,7 @@ The child-AI domain now has the two architectural agents plus ten specialist age
 ### Adult AI — 13 agents
 The adult-AI domain now has the companion architect plus twelve specialist agents: safety, consent/boundaries, memory, persona/character, proactive messaging, multimodal, voice, intimate privacy, content moderation, evaluation, anti-impersonation and operations.
 
-The repository currently contains **129 registered agents**. The child/adult domains account for **41 entries** (12 child-AI + 29 adult-AI), and the Horizon 2030 extension in this batch adds 7 adult-AI agents. The new agents are executable entrypoints, wired into the static registry and covered by compile/integration tests. They provide architecture and evaluation cores; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
+The repository currently contains **140 registered agents**. The registry is the source of truth for executable entrypoints. The latest additions include the complete Youth AI specialist batch below; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
 
 ## Batch: Adult AI — Horizon 2030 relationship, logistics and legacy extension
 
@@ -98,6 +98,26 @@ The Horizon 2030 extension has been implemented as **7 additional executable age
 Each agent uses the shared `AgentSpec/run_agent` runtime. The batch explicitly separates model-generated proposals from authorization and external side effects. Consent is scoped and revocable; biometric or behavioral signals are treated as uncertain context; no agent is permitted to covertly monitor communications, infer age from faces, diagnose people, impersonate third parties, control physical restraints, or claim an archive is an authentic digital twin without evidence.
 
 The integration test `tests/test_adult_ai_frontier.py` covers registration, target paths, Python compilation and domain-specific guard phrases for the complete 16-agent adult frontier set.
+
+## Batch: Youth AI — 11 specialist agents
+
+The youth-focused report was implemented as **11 executable agents** (the source list contains 11 archetypes despite describing the package as 10):
+
+| ID | Agent | Scope |
+|---|---|---|
+| `youth-ai-fintech-guardian` | Skarbnik — Fintech Guardian | Financial literacy, scam awareness and safe money habits; no transaction execution. |
+| `youth-ai-bio-optimizer` | Bio-Optymizer | Healthy routines and activity education without diagnosis, restrictive targets or unsafe biohacking. |
+| `youth-ai-digital-stylist` | Stylista Cyfrowy | Personal style, wardrobe planning and sustainability without body or attractiveness ratings. |
+| `youth-ai-esports-strategist` | Strateg E-sportowy | Game strategy, fair play and healthy play-life balance without covert monitoring. |
+| `youth-ai-agor-civic` | Agor — Civic Activator | Civic literacy and lawful community action with neutral political context and explicit review. |
+| `youth-ai-spiritual-compass` | Duchowy Kompas | Non-dogmatic reflection, mindfulness and values clarification. |
+| `youth-ai-hype-curator` | Kustosz Hype’u | Sneakers/collectibles research with provenance, authenticity and speculation guardrails. |
+| `youth-ai-energy-regulator` | Regulator Energii | Voluntary social-energy planning, pacing, breaks and personal boundaries. |
+| `youth-ai-meme-historian` | Archiwista Memów | Meme provenance, internet-culture context and media literacy. |
+| `youth-ai-safe-party-planner` | Organizator Imprez | Age-appropriate, substance-free event planning with safety and return-home safeguards. |
+| `youth-ai-parasocial-manager` | Coach Relacji AI | Healthy boundaries around creators, streamers and AI companions without diagnosis or dependency manipulation. |
+
+All 11 entrypoints use the shared `AgentSpec/run_agent` runtime, are registered in `agent_runtime/registry.py`, and are covered by `tests/test_youth_ai_frontier.py` for registration, path integrity, Python compilation and domain guardrails.
 
 ## Uruchomienie
 
