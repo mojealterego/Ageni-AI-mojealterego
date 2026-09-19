@@ -135,6 +135,13 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("adult-ai-legacy-archivist","Legacy Archivist","agents/adult-ai-legacy-archivist/agent.py","Consent-controlled personal and family memory archiving with provenance, review and deletion controls."),
 
     # Youth AI specialist batch
+    # Youth AI development ecosystem — 5 core profiles
+    AgentEntry("youth-ai-socrates-tutor","Sokrates — Youth Cognitive Tutor","agents/youth-ai-socrates-tutor/agent.py","Age-banded tutoring, metacognition, accessibility and academic-integrity support."),
+    AgentEntry("youth-ai-creator","Kreator — Youth Creative Expression","agents/youth-ai-creator/agent.py","Creative mentoring that preserves the learner's voice and agency."),
+    AgentEntry("youth-ai-navigator","Nawigator — Youth Career & Life Design","agents/youth-ai-navigator/agent.py","Career and life-design exploration with multiple reversible paths."),
+    AgentEntry("youth-ai-verifier","Weryfikator — Youth Media Literacy","agents/youth-ai-verifier/agent.py","Source verification, media literacy and uncertainty-aware claim analysis."),
+    AgentEntry("youth-ai-wellness-buffer","Bufor Emocjonalny — Youth Wellness Support","agents/youth-ai-wellness-buffer/agent.py","Non-clinical emotional-wellness support with human-escalation boundaries."),
+
     AgentEntry("youth-ai-fintech-guardian","Skarbnik — Fintech Guardian","agents/youth-ai-fintech-guardian/agent.py","Financial literacy, scam awareness and safe money habits for young people."),
     AgentEntry("youth-ai-bio-optimizer","Bio-Optymizer","agents/youth-ai-bio-optimizer/agent.py","Evidence-aware healthy routines without diagnosis, restrictive targets or unsafe biohacking."),
     AgentEntry("youth-ai-digital-stylist","Stylista Cyfrowy","agents/youth-ai-digital-stylist/agent.py","Personal style, wardrobe planning and sustainable choices without body or attractiveness ratings."),
