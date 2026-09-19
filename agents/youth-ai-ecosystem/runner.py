@@ -20,7 +20,7 @@ sys.path.insert(0, str(ROOT))
 
 def load_spec(agent_id: str):
     path = ENTRYPOINTS[agent_id]
-    module_name = f"_youth_core_{agent_id.replace("-", "_")}"
+    module_name = f"_youth_core_{agent_id.replace('-', '_')}"
     spec = importlib.util.spec_from_file_location(module_name, path)
     if spec is None or spec.loader is None:
         raise RuntimeError(f"Unable to load entrypoint: {path}")
