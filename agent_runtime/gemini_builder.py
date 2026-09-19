@@ -202,7 +202,7 @@ def validate_untrusted_tool_code(source: str) -> list[str]:
         (r"(^|\n)\s*eval\s*\(", "dynamic eval"),
         (r"os\.system\s*\(", "shell execution"),
         (r"subprocess\.(run|Popen|call)\s*\(", "subprocess execution"),
-        (r"open\([^)]*,\s*['"]w", "unbounded file write"),
+        (r'''open\([^)]*,\s*[\'\"]w''', "unbounded file write"),
     ]
     for pattern, label in dangerous:
         if re.search(pattern, source):
