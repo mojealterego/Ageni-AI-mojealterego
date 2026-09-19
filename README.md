@@ -5,7 +5,7 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **159 agentów w rejestrze**. Wśród nich są agenty portfolio, batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps, Child AI, Adult AI oraz nowy batch Youth AI.
+- **180 agentów w rejestrze**. Wśród nich są agenty portfolio, batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps, Child AI, Adult AI oraz nowy batch Youth AI.
 - Wszyscy agenci portfolio są wykonywalni przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
@@ -88,7 +88,16 @@ The child-AI domain now has the two architectural agents plus ten specialist age
 ### Adult AI — 13 agents
 The adult-AI domain now has the companion architect plus twelve specialist agents: safety, consent/boundaries, memory, persona/character, proactive messaging, multimodal, voice, intimate privacy, content moderation, evaluation, anti-impersonation and operations.
 
-The repository currently contains **140 registered agents**. The registry is the source of truth for executable entrypoints. The latest additions include the complete Youth AI specialist batch below; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
+The repository currently contains **180 registered agents**. The registry is the source of truth for executable entrypoints. The latest additions include the complete Youth AI specialist batch below; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
+
+## Batch: Youth AI — core development ecosystem
+
+The five core development profiles from the Youth AI ecosystem report are now connected to the central registry as executable entrypoints:
+`youth-ai-socrates-tutor`, `youth-ai-creator`, `youth-ai-navigator`, `youth-ai-verifier` oraz `youth-ai-wellness-buffer`.
+
+These entrypoints use the same `AgentSpec/run_agent` runtime as the rest of the repository. The companion profile module at `agents/youth-ai-ecosystem/agent.py` remains the inspectable catalogue of role, purpose and risk metadata.
+
+Integration coverage is in `tests/test_youth_ai_ecosystem.py` and verifies registry membership, exact paths, Python compilation, shared-runtime usage and the presence of the documented safety contracts. This is static/offline coverage; it does not prove model behavior, clinical safety, age verification, parental consent, privacy compliance or production readiness.
 
 ## Batch: Youth AI — specialist archetypes
 
