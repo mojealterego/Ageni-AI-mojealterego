@@ -43,6 +43,7 @@ EXPECTED = {
     "llm-red-team-auditor",
     "synthetic-media-disinformation-detector",
     "cognitive-privacy-governance",
+    "agent-forge",
     "causal-systems-research",
     "ai-coding-workflow-engineer",
     "pdf-rag-quality",
@@ -61,6 +62,11 @@ class PortfolioBatchTests(unittest.TestCase):
         self.assertEqual(registered, EXPECTED)
         self.assertEqual(EXPECTED, set(CATALOG))
 
+    def test_agent_forge_has_implementation_contract(self):
+        instructions = build_instructions("agent-forge")
+        for phrase in ("executable agent", "code-level changes", "tests", "provenance", "promotion"):
+            self.assertIn(phrase, instructions)
+
     def test_new_cognitive_safety_agents_have_guardrails(self):
         guarded = {
             "cognitive-profiling-auditor",
@@ -78,13 +84,14 @@ class PortfolioBatchTests(unittest.TestCase):
 
     def test_shared_entrypoint_exists(self):
         matches = [e for e in existing_entrypoints() if e.agent_id in EXPECTED]
-        self.assertEqual(len(matches), 39)
+        self.assertEqual(len(matches), 40)
 
     def test_shared_entrypoint_compiles(self):
         py_compile.compile(str(ROOT / "agents/portfolio_agent.py"), doraise=True)
 
     def test_specialized_entrypoints_compile_and_registry_targets_them(self):
         specialized = {
+            "agent-forge": "agents/agent-forge/agent.py",
             "causal-systems-research": "agents/causal-systems-research/agent.py",
             "ai-coding-workflow-engineer": "agents/ai-coding-workflow-engineer/agent.py",
             "pdf-rag-quality": "agents/pdf-rag-quality/agent.py",
