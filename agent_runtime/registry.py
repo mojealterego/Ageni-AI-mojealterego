@@ -206,19 +206,6 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("mediator-klasowy","Mediator Klasowy","agents/school-mediator-klasowy/agent.py","Class-community support and nonviolent conflict resolution."),
     AgentEntry("filozof-moralny","Filozof Moralny","agents/school-filozof-moralny/agent.py","Ethics and philosophical reasoning for school learners."),
 
-    # Vocational and technical school tutor batch
-    AgentEntry("vocational-polonista","Wirtualny Polonista","agents/vocational-polonista/agent.py","Polish language, literature, rhetoric and exam-oriented learning for technical/vocational students."),
-    AgentEntry("vocational-matematyk","Matematyka Techniczna","agents/vocational-matematyk/agent.py","Mathematics, modelling and technical applications."),
-    AgentEntry("vocational-jezyk-zawodowy","Język Zawodowy — Vocational English/German","agents/vocational-jezyk-zawodowy/agent.py","Workplace English/German and English for Specific Purposes."),
-    AgentEntry("vocational-sysadmin-inf02","SysAdmin Mentor INF.02","agents/vocational-sysadmin-inf02/agent.py","Systems, networks, diagnostics, IPv4 and command-line learning."),
-    AgentEntry("vocational-web-inf03","FullStack Lead Developer INF.03","agents/vocational-web-inf03/agent.py","HTML/CSS/JS/PHP/MySQL, debugging, data modelling and web security fundamentals."),
-    AgentEntry("vocational-mechanik-cnc","Inżynier Technolog / Operator CNC Tutor","agents/vocational-mechanik-cnc/agent.py","Technical drawing, machining concepts and ISO/CNC programming education."),
-    AgentEntry("vocational-budownictwo","Kierownik Budowy / Kosztorysant Tutor","agents/vocational-budownictwo/agent.py","Construction technology, documentation, scheduling and estimating."),
-    AgentEntry("vocational-ekonomista","Wirtualny Główny Księgowy — Technik Ekonomista","agents/vocational-ekonomista/agent.py","Accounting, payroll, documentation and financial-analysis education."),
-    AgentEntry("vocational-gastronomia","Technolog Żywności / Chef Tutor","agents/vocational-gastronomia/agent.py","Food technology, HACCP concepts, menu planning and culinary calculations."),
-    AgentEntry("vocational-biznes-mentor","Biznes Mentor","agents/vocational-biznes-mentor/agent.py","Business models, market discovery, budgeting and case-study learning."),
-    AgentEntry("vocational-edb","Instruktor EDB — Bezpieczeństwo i Pierwsza Pomoc","agents/vocational-edb/agent.py","Safety education, emergency-response scenarios and first-aid learning."),
-
     # Autonomous anomaly / frontier systems research batch
     AgentEntry("xenobot-research-agent","Xenobot Research Agent","agents/xenobot-research-agent/agent.py","Wetware research analysis, computational modeling and provenance without live biological operation."),
     AgentEntry("dishbrain-agent","DishBrain Agent","agents/dishbrain-agent/agent.py","Closed-loop biological-computing analysis and simulation without live-cell or hardware control."),
