@@ -154,6 +154,19 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("youth-ai-safe-party-planner","Organizator Imprez","agents/youth-ai-safe-party-planner/agent.py","Age-appropriate, substance-free event planning with safety, accessibility and return-home safeguards."),
     AgentEntry("youth-ai-parasocial-manager","Coach Relacji AI","agents/youth-ai-parasocial-manager/agent.py","Healthy boundaries around creators, streamers and AI companions without diagnosis or dependency manipulation."),
 
+    # Vocational and technical school tutor batch
+    AgentEntry("polonista","Wirtualny Polonista","agents/vocational-tutors/agents.py","Polish language, literature, interpretation and argumentation."),
+    AgentEntry("matematyka","Tutor Matematyki STEM","agents/vocational-tutors/agents.py","Secondary-school mathematics with engineering applications and error diagnosis."),
+    AgentEntry("jezyki","Tutor Języków Zawodowych","agents/vocational-tutors/agents.py","English/German ESP training with CEFR-aware workplace practice."),
+    AgentEntry("inf02","SysAdmin Mentor INF.02","agents/vocational-tutors/agents.py","Authorized system, network and defensive cybersecurity laboratory tutoring."),
+    AgentEntry("inf03","Full-Stack Mentor INF.03","agents/vocational-tutors/agents.py","HTML/CSS/JS/PHP/SQL development and secure coding tutoring."),
+    AgentEntry("mechanik","Mentor Mechanik i CNC","agents/vocational-tutors/agents.py","Technical drawing, machining and introductory CNC tutoring with BHP gates."),
+    AgentEntry("budownictwo","Mentor Budownictwa i Kosztorysowania","agents/vocational-tutors/agents.py","Construction technology, takeoffs, estimating and scheduling tutoring."),
+    AgentEntry("ekonomista","Tutor Ekonomista EKA","agents/vocational-tutors/agents.py","Bookkeeping, payroll arithmetic, documents and financial-ratio tutoring."),
+    AgentEntry("gastronomia","Tutor Gastronomii HGT","agents/vocational-tutors/agents.py","Food technology, kitchen workflow, costing and HACCP/GHP tutoring."),
+    AgentEntry("biznes","Biznes Mentor","agents/vocational-tutors/agents.py","Business models, budgeting, scenarios and ethical entrepreneurship."),
+    AgentEntry("edb","Instruktor EDB","agents/vocational-tutors/agents.py","Emergency-response education and first-aid scenario practice."),
+
     # Child AI specialist batch
     AgentEntry("child-ai-education-agent","Child AI Education Agent","agents/child-ai-education-agent/agent.py","Age-appropriate tutoring, curriculum alignment and academic-integrity controls."),
     AgentEntry("child-ai-sel-agent","Child AI Social-Emotional Learning Agent","agents/child-ai-sel-agent/agent.py","Non-clinical SEL interactions with developmental and escalation boundaries."),
