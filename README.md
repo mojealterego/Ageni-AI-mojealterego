@@ -167,3 +167,18 @@ Raport SAAD dla polskiej szkoły podstawowej został przełożony na **23 wyspec
 `mentor-odkrywcow`, `playful-polyglot`, `kustosz-slowa`, `kronikarz-analityczny`, `globalny-komunikator`, `straznik-tozsamosci`, `mistrz-logiki`, `architekt-cyfrowy`, `przewodnik-terenowy`, `bio-eksplorator`, `geo-strateg`, `laborant-teoretyczny`, `fizyk-fundamentalny`, `wizjoner-estetyczny`, `maestro-dzwieku`, `inzynier-bezpieczenstwa`, `aktywista-demokratyczny`, `coach-dobrostanu`, `instruktor-reagowania-kryzysowego`, `trener-teoretyk`, `architekt-kariery`, `mediator-klasowy` oraz `filozof-moralny`.
 
 Każdy agent ma własny entrypoint pod `agents/school-*/agent.py`, korzysta ze wspólnego runtime'u `AgentSpec/run_agent` i jest zarejestrowany w `agent_runtime/registry.py`. Pakiet ma osobny test integracyjny `tests/test_school_tutors.py` sprawdzający rejestrację, zgodność ścieżek, kompilację oraz kontrakty bezpieczeństwa. Dla treści aktualnych prawnie lub programowo agent ma wymagać bieżących źródeł zamiast traktować raport jako niezmienny stan prawa.
+
+
+## Youth AI — deployment validation
+
+The five core Youth AI agents are wired to the central registry and unified runner:
+
+- `youth-ai-socrates-tutor` — Sokrates
+- `youth-ai-creator` — Kreator
+- `youth-ai-navigator` — Nawigator
+- `youth-ai-verifier` — Weryfikator
+- `youth-ai-wellness-buffer` — Bufor Emocjonalny
+
+The shared `agent_runtime/youth_safety.py` layer provides deterministic preflight checks, session budgets and dangerous-output blocking. New offline tests in `tests/test_youth_safety.py` cover crisis/grooming hard stops, emotional-friction confirmation, output blocking and session reset/limits.
+
+This validation is still not a substitute for production child-safety review, legal/privacy review, red-team testing or human escalation procedures.
