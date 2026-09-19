@@ -80,6 +80,16 @@ Raport o autonomicznych agentach AI dla dzieci został przełożony na dwa wyspe
 
 Raportowe twierdzenia o konkretnych produktach, cenach, językach, modelach, certyfikacjach i praktykach przetwarzania danych są traktowane jako hipotezy do weryfikacji. Agenty nie zakładają skuteczności terapeutycznej, diagnozowania ani gwarantowanej prewencji medycznej; wymagają aktualnych źródeł i przeglądu właściwego dla jurysdykcji.
 
+## Batch: Child AI + Adult AI — complete specialist sets
+
+### Child AI — 12 agents
+The child-AI domain now has the two architectural agents plus ten specialist agents: education, SEL, language learning, robotics, generative toys, monitoring, parental controls, privacy, evaluation and content moderation. Each entrypoint has its own mission and safety contract.
+
+### Adult AI — 13 agents
+The adult-AI domain now has the companion architect plus twelve specialist agents: safety, consent/boundaries, memory, persona/character, proactive messaging, multimodal, voice, intimate privacy, content moderation, evaluation, anti-impersonation and operations.
+
+The repository therefore registers **90 agents total**: the existing 68 plus 22 new child/adult specialist agents. The new agents are executable entrypoints, wired into the static registry and covered by compile/integration tests. They provide architecture and evaluation cores; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
+
 ## Uruchomienie
 
 ```bash
