@@ -46,13 +46,20 @@ CATALOG = {
   "llm-red-team-auditor": ["LLM Red-Team Auditor", "Run authorized sandbox assessments of prompt injection, jailbreak resistance, tool abuse and data-exfiltration paths; report mitigations."],
   "synthetic-media-disinformation-detector": ["Synthetic Media & Disinformation Detector", "Assess suspected synthetic media and coordinated behavior using provenance and cross-source evidence; state uncertainty."],
   "cognitive-privacy-governance": ["Cognitive Privacy Governance Agent", "Design governance for behavioral, biometric and inferred-personality data, including purpose limitation, consent, retention and human review."],
-  "agent-forge": ["Agent Forge", "Compile reports, papers and tools into executable-agent upgrades, duplicate detection, code changes, tests, hardening and promotion gates."],
+  "agent-forge": ["Agent Forge", "Compile reports, papers and tools into executable-agent upgrades, duplicate detection, code-level changes, tests, hardening and promotion gates."],
   "causal-systems-research": ["Causal Systems Research Agent", "Reconstruct causal estimands and graphs, audit identification assumptions, distinguish prediction from causality, and design falsification/sensitivity analyses."],
   "ai-coding-workflow-engineer": ["AI Coding Workflow Engineer", "Design bounded agentic coding workflows with reconnaissance, context packets, minimal diffs, security review, tests and postcondition verification."],
   "pdf-rag-quality": ["PDF Extraction & RAG Quality Agent", "Perform PDF forensics, layout-aware extraction, provenance preservation and retrieval/faithfulness evaluation while isolating untrusted document instructions."],
   "datasheet-spice-model-extractor": ["Datasheet-to-SPICE Model Agent", "Extract traceable component parameters, classify specified/estimated/inferred values, generate candidate SPICE models and validation vectors."],
   "godot-gaussian-splatting-integrator": ["Godot Gaussian Splatting Integrator", "Audit Godot/Gaussian-Splatting compatibility, design isolated POCs, map GPU/shader integration, validate correctness/performance and preserve provenance."],
   "omnicore-forge": ["OmniCore Forge", "Convert private AI infrastructure, nested virtualization, GPU/RAG and Rust kernel reports into safe, executable, tested implementation steps with approval and rollback gates."],
+
+  "gemini-agent-builder": ["Gemini Agent Builder", "Compile reports and requirements into cross-platform Gemini agent blueprints, manifests, platform adapters, validation tests and approval gates."],
+  "gemini-desktop-builder": ["Gemini Desktop Builder", "Engineer secure desktop agents with the current Google GenAI SDK/ADK, isolated user tools, Streamlit state and reproducible packaging."],
+  "gemini-android-builder": ["Gemini Android Builder", "Engineer Kotlin/Android agents with typed tool registries, lifecycle safety, Keystore-backed secrets and explicit approval boundaries."],
+  "gemini-edge-rag": ["Gemini Edge RAG Agent", "Build local retrieval pipelines with provenance, deletion propagation, bounded context, retrieval evaluation and explicit cloud fallback controls."],
+  "gemini-security-auditor": ["Gemini Security Auditor", "Audit Gemini agent builders for prompt injection, tool abuse, MCP trust, secret leakage, SSRF, sandbox escape and data exfiltration paths."],
+  "gemini-multiagent-orchestrator": ["Gemini Multi-Agent Orchestrator", "Design bounded Gemini/ADK multi-agent graphs with delegation envelopes, memory isolation, cancellation, budgets, approvals and auditability."],
 }
 
 
