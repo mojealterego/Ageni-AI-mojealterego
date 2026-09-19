@@ -5,12 +5,12 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **27 nowych agentów portfolio**: 10 B2B + 10 mobile + 7 monetization.
+- **34 nowych agentów portfolio**: 10 B2B + 10 mobile + 7 monetization + 7 cognitive-safety.
 - Wszystkie 27 są wykonywalne przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
 
-## 27 agentów
+## 34 agentów
 
 | `agent-policy-gateway` | **Agent Policy Gateway** | Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate identity, scope, risk, data sensitivity, policy conflict, approval and audit requirements. |
 | `agent-ops-control-tower` | **Agent Ops Control Tower** | Analyze agent executions, approvals, failures, latency, model usage and cost; separate observed telemetry from inferred causes. |
@@ -39,12 +39,24 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 | `micro-saas` | **Micro-SaaS Agent** | Micro-product discovery, MVP scope, economics, launch and retention planning. |
 | `ai-trading-risk` | **AI Trading Risk Agent** | Backtesting, scenario analysis and trading-risk evaluation without trade execution. |
 | `ai-freelance-ops` | **AI Freelance Operations Agent** | Freelance and productized-service packaging, delivery, QA and capacity planning. |
+| `cognitive-profiling-auditor` | **Cognitive Profiling Auditor** | Audit of inferred-personality profiling, validity, consent, inference limits and decision-impact risk. |
+| `persuasion-dark-patterns-auditor` | **Persuasion & Dark-Patterns Auditor** | Detection and documentation of coercive persuasion, deceptive scarcity and dark UX patterns. |
+| `affective-ai-evaluator` | **Affective AI Evaluator** | Evaluation of emotion-recognition, facial-coding, voice-affect and biometric analytics. |
+| `social-engineering-defense` | **Social Engineering Defense Agent** | Defensive analysis of phishing, pretexting, impersonation and social-engineering indicators. |
+| `llm-red-team-auditor` | **LLM Red-Team Auditor** | Authorized sandbox assessment of prompt injection, jailbreak resistance and tool/data abuse paths. |
+| `synthetic-media-disinformation-detector` | **Synthetic Media & Disinformation Detector** | Provenance-based assessment of suspected deepfakes, astroturfing and synthetic-consensus signals. |
+| `cognitive-privacy-governance` | **Cognitive Privacy Governance Agent** | Governance for behavioral, biometric and inferred-personality data, including high-risk advertising and political contexts. |
 
 ## Nowy batch: monetyzacja AI
 
 Raport o modelach monetyzacji został przełożony na 7 dodatkowych agentów: AI Automation Agency, AI Creator Monetization, Programmatic SEO, Faceless Video, Micro-SaaS, AI Trading Risk oraz AI Freelance Operations.
 
 Ten batch dostarcza wspólny rdzeń reasoning/planning. Integracje z Make/n8n, CMS, YouTube, płatnościami, brokerami, marketplace'ami i innymi usługami pozostają osobnymi adapterami wymagającymi uprawnień, approval gates i weryfikacji postcondition.
+
+## Nowy batch: cognitive safety i audyt perswazji
+
+Raport o profilowaniu psychometrycznym, affective AI, perswazji, dark patterns, socjotechnice, red-teamingu LLM, syntetycznych mediach i prywatności poznawczej został przełożony na 7 agentów audytowych/obronnych. Ich zakres obejmuje wykrywanie ryzyk, ocenę dowodów, governance i kontrolowane testy w autoryzowanym środowisku; nie służą do ukrytego mikrotargetowania politycznego, profilowania osób bez zgody, phishingu ani obchodzenia zabezpieczeń.
+
 
 Modele przychodowe są traktowane jako hipotezy do walidacji przez koszty, KPI i unit economics — bez gwarantowania wyniku finansowego.
 
