@@ -75,6 +75,7 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("boardgame-ludology","Boardgame Ludology Agent","agents/boardgame-ludology/agent.py","Formal tabletop rules, self-play, game-theoretic evaluation and balance/playtest analysis."),
     AgentEntry("quality-diversity-engineer","Quality Diversity Engineer","agents/quality-diversity-engineer/agent.py","MAP-Elites, Novelty Search, evolutionary archives and reproducible quality-diversity experiments."),
     AgentEntry("frontend-design-to-code","Frontend Design-to-Code Engineer","agents/frontend-design-to-code/agent.py","Screenshot/design-to-code, responsive frontend architecture, accessibility and visual validation."),
+    AgentEntry("kernel-systems-engineer","Kernel Systems Engineer","agents/kernel-systems-engineer/agent.py","OS/kernel implementation, nested virtualization, GPU/RAG infrastructure and bounded self-healing engineering."),
 )
 
 
