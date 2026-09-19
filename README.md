@@ -90,6 +90,17 @@ The adult-AI domain now has the companion architect plus twelve specialist agent
 
 The repository currently contains **140 registered agents**. The registry is the source of truth for executable entrypoints. The latest additions include the complete Youth AI specialist batch below; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
 
+## Batch: Youth AI — specialist archetypes
+
+Najnowszy pakiet dodaje **11 wykonywalnych agentów Youth AI**:
+`youth-ai-fintech-guardian`, `youth-ai-bio-optimizer`, `youth-ai-digital-stylist`, `youth-ai-esports-strategist`, `youth-ai-agor-civic`, `youth-ai-spiritual-compass`, `youth-ai-hype-curator`, `youth-ai-energy-regulator`, `youth-ai-meme-archivist`, `youth-ai-safe-party-planner` oraz `youth-ai-parasocial-manager`.
+
+Każdy agent korzysta ze wspólnego `AgentSpec/run_agent` i ma własny kontrakt bezpieczeństwa. Pakiet obejmuje edukację finansową, wellbeing bez diagnozowania, styl bez oceniania ciała, esport bez ukrytego monitoringu, neutralną edukację obywatelską, niedogmatyczną refleksję, kulturę sneakersów i kolekcjonerstwa, zarządzanie energią społeczną, archiwizację memów, bezpieczne planowanie imprez oraz autonomię w relacjach paraspołecznych.
+
+Agenty nie wykonują samodzielnie transakcji, publikacji, wiadomości ani działań zewnętrznych. Szczególny nacisk położono na minimalizację danych, jawność niepewności, user-controlled reminders i explicit review dla działań konsekwencyjnych. Dla tematów politycznych agent `youth-ai-agor-civic` pozostaje neutralny i faktograficzny; nie targetuje ani nie manipuluje użytkowników.
+
+Test integracyjny: `tests/test_youth_ai_frontier.py`.
+
 ## Batch: Adult AI — Horizon 2030 relationship, logistics and legacy extension
 
 The Horizon 2030 extension has been implemented as **7 additional executable agents**:
