@@ -5,12 +5,12 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **20 nowych agentów portfolio**: 10 B2B + 10 mobile.
-- Wszystkie 20 są wykonywalne przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
+- **27 nowych agentów portfolio**: 10 B2B + 10 mobile + 7 monetization.
+- Wszystkie 27 są wykonywalne przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
 
-## 20 agentów
+## 27 agentów
 
 | `agent-policy-gateway` | **Agent Policy Gateway** | Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate identity, scope, risk, data sensitivity, policy conflict, approval and audit requirements. |
 | `agent-ops-control-tower` | **Agent Ops Control Tower** | Analyze agent executions, approvals, failures, latency, model usage and cost; separate observed telemetry from inferred causes. |
@@ -32,6 +32,21 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 | `travel-execution-agent` | **TRAVEL EXECUTION AGENT** | Plan itineraries and coordinate travel logistics; surface constraints and require confirmation before paid bookings or irreversible changes. |
 | `health-navigator` | **HEALTH NAVIGATOR** | Organize health information and appointments and prepare questions for clinicians; navigation only, not diagnosis or treatment decisions. |
 | `personal-knowledge-agent` | **PERSONAL KNOWLEDGE AGENT** | Retrieve and organize user-authorized personal information with provenance, timestamps and access scope; memory is not authorization. |
+| `aaa-automation-agency` | **AI Automation Agency Agent** | Automation-agency offer design, workflow architecture and delivery planning. |
+| `ai-creator-monetization` | **AI Creator Monetization Agent** | AI creator/persona monetization planning with consent, adult-only and platform-policy guardrails. |
+| `programmatic-seo` | **Programmatic SEO Agent** | Scalable search-content architecture, templates, quality gates and measurement. |
+| `faceless-video` | **Faceless Video Agent** | Repeatable faceless-video channel planning, production workflow and analytics. |
+| `micro-saas` | **Micro-SaaS Agent** | Micro-product discovery, MVP scope, economics, launch and retention planning. |
+| `ai-trading-risk` | **AI Trading Risk Agent** | Backtesting, scenario analysis and trading-risk evaluation without trade execution. |
+| `ai-freelance-ops` | **AI Freelance Operations Agent** | Freelance and productized-service packaging, delivery, QA and capacity planning. |
+
+## Nowy batch: monetyzacja AI
+
+Raport o modelach monetyzacji został przełożony na 7 dodatkowych agentów: AI Automation Agency, AI Creator Monetization, Programmatic SEO, Faceless Video, Micro-SaaS, AI Trading Risk oraz AI Freelance Operations.
+
+Ten batch dostarcza wspólny rdzeń reasoning/planning. Integracje z Make/n8n, CMS, YouTube, płatnościami, brokerami, marketplace'ami i innymi usługami pozostają osobnymi adapterami wymagającymi uprawnień, approval gates i weryfikacji postcondition.
+
+Modele przychodowe są traktowane jako hipotezy do walidacji przez koszty, KPI i unit economics — bez gwarantowania wyniku finansowego.
 
 ## Uruchomienie
 
