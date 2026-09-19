@@ -1,17 +1,19 @@
 """Tests for the SAAD school tutor profile catalogue."""
 import importlib.util
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE = ROOT / "agents" / "saad-school-tutors" / "agent.py"
 spec = importlib.util.spec_from_file_location("saad_school_tutors", MODULE)
-saad = importlib.util.module_from_spec(spec)
 assert spec and spec.loader
+saad = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = saad
 spec.loader.exec_module(saad)
 
-def test_catalogue_has_22_distinct_tutors():
-    assert len(saad.PROFILES) == 22
-    assert len(set(saad.AGENT_IDS)) == 22
+def test_catalogue_has_23_distinct_tutors():
+    assert len(saad.PROFILES) == 23
+    assert len(set(saad.AGENT_IDS)) == 23
 
 def test_all_profiles_have_common_safeguards():
     for profile in saad.PROFILES.values():
