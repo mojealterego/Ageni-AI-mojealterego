@@ -52,7 +52,7 @@ EXPECTED = {
 
 
 class PortfolioBatchTests(unittest.TestCase):
-    def test_all_34_registered(self):
+    def test_all_39_registered(self):
         registered = {entry.agent_id for entry in list_agents()}
         self.assertTrue(EXPECTED.issubset(registered))
 
