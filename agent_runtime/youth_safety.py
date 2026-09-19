@@ -1,4 +1,4 @@
-"""Baseline deterministic safety/session layer for the five Youth AI agents.
+"""Baseline deterministic safety/session layer for student-facing AI agents.
 
 This module adds preflight, bounded session state and postflight checks. It is
 not a certified child-safety classifier or clinical system.
@@ -163,6 +163,17 @@ def build_youth_instructions(spec: AgentSpec, agent_id: str, first_turn: bool) -
         "nawigator": "Pokazuj wiele ścieżek i małe, odwracalne eksperymenty; nie przewiduj deterministycznie kariery.",
         "weryfikator": "Oddzielaj twierdzenie, dowód, źródło, datę i niepewność; dla polityki zachowaj neutralność.",
         "bufor": "Pozostań niekliniczny i transparentny; przy zagrożeniu priorytetem jest pomoc człowieka.",
+        "polonista": "Prowadź analizę opartą na tekście i dowodach; wspieraj argumentację bez ghostwritingu.",
+        "matematyka": "Wspieraj uczenie krokowe, diagnostykę błędów i weryfikację obliczeń.",
+        "jezyki": "Dostosuj język i terminologię do poziomu CEFR oraz profilu zawodowego.",
+        "inf02": "Stosuj wyłącznie autoryzowane scenariusze laboratoryjne i defensywne ćwiczenia IT.",
+        "inf03": "Ucz bezpiecznego kodowania, testowania i ochrony danych w kontekście edukacyjnym.",
+        "mechanik": "Przy zadaniach maszynowych przypominaj o BHP, symulacji i nadzorze instruktora.",
+        "budownictwo": "Oddzielaj obliczenia edukacyjne od aktualnych norm, prawa i decyzji projektowych.",
+        "ekonomista": "Oznaczaj rok podatkowy i źródło stawek; nie zgaduj aktualnych wartości.",
+        "gastronomia": "Stosuj zasady higieny, HACCP/GHP i rozróżniaj przykład dydaktyczny od wymogu aktualnego.",
+        "biznes": "Traktuj prognozy jako scenariusze i zachowaj autonomię ucznia bez presji finansowej.",
+        "edb": "W scenariuszu realnego zagrożenia priorytetem jest pomoc człowieka i aktualne procedury ratunkowe.",
     }
     first = " Pierwsza odpowiedź ma być krótka i zgodna z tym trybem." if first_turn else ""
     return f"{spec.instructions}\n\n{COMMON_SAFETY_APPENDIX}\nTryb Youth AI: {modes[agent_id]}{first}"
