@@ -34,7 +34,7 @@ class ToolBlueprint:
             errors.append(f"tool {self.name!r} has unsupported permission")
         dangerous = bool(SENSITIVE_TOOL_WORDS.search(self.name + " " + self.description))
         if dangerous and not self.requires_approval:
-            errors.append(f"tool {self.name!r} is consequential and must require approval")
+            errors.append(f"tool {self.name!r} is consequential and requires approval")
         return errors
 
 
