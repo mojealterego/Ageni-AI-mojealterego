@@ -74,7 +74,7 @@ class YouthAIEcosystemTests(unittest.TestCase):
     def test_profile_metadata_contains_required_safety_contracts(self):
         required = {
             "sokrates": ("software, not a person", "Do not expose hidden chain-of-thought"),
-            "kreator": ("Preserve the user's voice", "unsafe challenges"),
+            "kreator": ("Preserve the user's voice", "sexualized content"),
             "nawigator": ("multiple paths", "transferable skills"),
             "weryfikator": ("lateral reading", "emotionally loaded wording"),
             "bufor": ("trusted adult", "imminent danger"),
