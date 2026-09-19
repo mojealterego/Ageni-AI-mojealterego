@@ -147,8 +147,7 @@ CATALOG = {
   "cognitive-privacy-governance": [
     "Cognitive Privacy Governance Agent",
     "Design governance for behavioral, biometric and inferred-personality data: purpose limitation, consent, retention, access controls, auditability, human review and high-risk use restrictions, including advertising and political contexts."
-  ]
-
+  ],
   "causal-systems-research": [
     "Causal Systems Research Agent",
     "Reconstruct causal estimands and graphs from supplied research, audit identification assumptions, separate prediction from causality, design falsification/sensitivity analyses, and produce reproducible verification protocols."
