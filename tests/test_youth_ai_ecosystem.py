@@ -7,6 +7,7 @@ from pathlib import Path
 
 from agent_runtime.registry import find_agent, list_agents
 import importlib.util
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -17,6 +18,7 @@ def load_ecosystem_module():
     if spec is None or spec.loader is None:
         raise RuntimeError("Unable to load youth ecosystem profile module")
     module = importlib.util.module_from_spec(spec)
+    sys.modules[spec.name] = module
     spec.loader.exec_module(module)
     return module
 
