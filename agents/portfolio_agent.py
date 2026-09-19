@@ -12,12 +12,12 @@ import sys
 from agent_runtime.openai_agent import AgentSpec, run_agent
 
 CATALOG = {
-  "agent-policy-gateway": ["Agent Policy Gateway", "Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate identity, scope, risk, data sensitivity, policy conflict, approval and audit requirements."],
-  "agent-ops-control-tower": ["Agent Ops Control Tower", "Analyze agent executions, approvals, failures, latency, model usage and cost; separate observed telemetry from inferred causes."],
-  "compliance-evidence": ["Compliance Evidence Agent", "Collect, map and verify audit evidence against stated controls; track provenance, timestamps, gaps and contradictions."],
+  "agent-policy-gateway": ["Agent Policy Gateway", "Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate workload identity, capability scope, data sensitivity, policy conflict, approval, budget, rate and postcondition requirements; fail closed on missing evidence."],
+  "agent-ops-control-tower": ["Agent Ops Control Tower", "Analyze agent executions, approvals, failures, latency, model usage and cost; correlate traces with tool calls, budgets, circuit-breakers, drift signals and release gates; separate telemetry from inference."],
+  "compliance-evidence": ["Compliance Evidence Agent", "Map requirements to controls, evidence, owners, gaps and re-tests; enforce claim-level provenance, policy-version tracking, attestation state and explicit human-review gates."],
   "procurement-scout": ["Procurement Scout", "Compare suppliers, total cost, delivery constraints, dependencies, concentration risk and evidence quality; produce auditable sourcing analysis."],
   "cashflow-collections": ["Cashflow Collections Agent", "Analyze receivables aging and objectively prioritize follow-up; prepare collection workflows without sending or changing financial records without authorization."],
-  "contract-obligations": ["Contract Obligation Agent", "Extract obligations, deadlines, parties, dependencies and renewal/termination windows from supplied contracts; flag legal-review items."],
+  "contract-obligations": ["Contract Obligation Agent", "Extract obligations, deadlines, parties, dependencies and renewal/termination windows from supplied contracts; cross-check defined terms, exceptions and evidence locators, and flag legal-review items."],
   "data-quality": ["Data Quality Agent", "Detect duplicates, missing values, schema drift, invalid ranges and referential-integrity problems; propose reversible remediation."],
   "inventory-replenishment": ["Inventory Replenishment Agent", "Analyze stock, demand, lead times and supplier constraints; produce replenishment recommendations with assumptions and uncertainty."],
   "ai-finops": ["AI FinOps Agent", "Attribute AI/agent spend, detect waste and recommend routing, caching, model and budget controls without inventing telemetry or pricing."],
