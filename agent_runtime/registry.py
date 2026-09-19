@@ -68,6 +68,13 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("gemini-edge-rag","Gemini Edge RAG Agent","agents/gemini-edge-rag/agent.py","On-device RAG, provenance, local indexing and cloud fallback controls."),
     AgentEntry("gemini-security-auditor","Gemini Security Auditor","agents/gemini-security-auditor/agent.py","Security assessment for Gemini builders, tools, MCP and data boundaries."),
     AgentEntry("gemini-multiagent-orchestrator","Gemini Multi-Agent Orchestrator","agents/gemini-multiagent-orchestrator/agent.py","Bounded delegation, memory, approvals and observability for multi-agent Gemini systems."),
+    AgentEntry("system-kernel-engineer","System Kernel Engineer","agents/system-kernel-engineer/agent.py","Low-level OS/kernel, Rust/no_std, C-to-Rust, GPU and hardware-interface engineering with verification gates."),
+    AgentEntry("gamedev-engineer","GameDev Engineer","agents/gamedev-engineer/agent.py","Unity, Unreal, Godot, mobile and gameplay-AI engineering with deterministic QA and performance gates."),
+    AgentEntry("creative-writing-room","Creative Writing Room","agents/creative-writing-room/agent.py","Long-form fiction planning, world-bible, bounded drafting, RAG and continuity control."),
+    AgentEntry("comic-visual-continuity","Comic Visual Continuity Agent","agents/comic-visual-continuity/agent.py","Comic panel scripting, character/reference consistency and visual continuity QA."),
+    AgentEntry("boardgame-ludology","Boardgame Ludology Agent","agents/boardgame-ludology/agent.py","Formal tabletop rules, self-play, game-theoretic evaluation and balance/playtest analysis."),
+    AgentEntry("quality-diversity-engineer","Quality Diversity Engineer","agents/quality-diversity-engineer/agent.py","MAP-Elites, Novelty Search, evolutionary archives and reproducible quality-diversity experiments."),
+    AgentEntry("frontend-design-to-code","Frontend Design-to-Code Engineer","agents/frontend-design-to-code/agent.py","Screenshot/design-to-code, responsive frontend architecture, accessibility and visual validation."),
 )
 
 
