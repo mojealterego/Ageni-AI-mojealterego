@@ -84,6 +84,7 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("agent-evaluation-ops","Agent Evaluation Ops","agents/agent-evaluation-ops/agent.py","AgentOps evaluation, golden datasets, judge calibration, drift detection and CI/CD circuit breakers."),
     AgentEntry("adult-ai-companion-architect","Adult AI Companion Architect","agents/adult-ai-companion-architect/agent.py","Architecture, privacy, consent, safety and evaluation for adult-oriented AI companion software."),
     AgentEntry("child-ai-safety-architect","Child AI Safety Architect","agents/child-ai-safety-architect/agent.py","Child-directed AI safety, age-appropriate UX, privacy, parental controls, abuse resistance and evaluation."),
+    AgentEntry("child-ai-ecosystem-architect","Child AI Ecosystem Architect","agents/child-ai-ecosystem-architect/agent.py","End-to-end architecture for child-facing tutors, companions, robots, generative toys and monitoring systems with safety and privacy gates."),
 )
 
 
