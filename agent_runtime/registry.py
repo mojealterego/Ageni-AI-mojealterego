@@ -76,6 +76,12 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("quality-diversity-engineer","Quality Diversity Engineer","agents/quality-diversity-engineer/agent.py","MAP-Elites, Novelty Search, evolutionary archives and reproducible quality-diversity experiments."),
     AgentEntry("frontend-design-to-code","Frontend Design-to-Code Engineer","agents/frontend-design-to-code/agent.py","Screenshot/design-to-code, responsive frontend architecture, accessibility and visual validation."),
     AgentEntry("kernel-systems-engineer","Kernel Systems Engineer","agents/kernel-systems-engineer/agent.py","OS/kernel implementation, nested virtualization, GPU/RAG infrastructure and bounded self-healing engineering."),
+    AgentEntry("legal-compliance-agent","Legal & Compliance Agent","agents/legal-compliance-agent/agent.py","Traceable legal-information analysis, agentic RAG, citation enforcement and compliance evidence mapping."),
+    AgentEntry("scientific-experiment-agent","Scientific Experiment Agent","agents/scientific-experiment-agent/agent.py","Scientific experiment design, hardware-in-the-loop orchestration, data integrity and reproducible analysis."),
+    AgentEntry("cross-saas-orchestrator","Cross-SaaS Orchestrator","agents/cross-saas-orchestrator/agent.py","Provider-neutral cross-SaaS workflow orchestration, MCP-style tool gating, identity scopes and compensation."),
+    AgentEntry("agent-supervisor-killswitch","Agent Supervisor & Kill Switch","agents/agent-supervisor-killswitch/agent.py","External policy proxy, hard budgets, anomaly detection, kill switch and bounded recovery for autonomous agents."),
+    AgentEntry("realtime-crisis-manager","Real-Time Crisis Manager","agents/realtime-crisis-manager/agent.py","Event-driven crisis architecture with low-latency deterministic controls and bounded model-based analysis."),
+    AgentEntry("agent-evaluation-ops","Agent Evaluation Ops","agents/agent-evaluation-ops/agent.py","AgentOps evaluation, golden datasets, judge calibration, drift detection and CI/CD circuit breakers."),
 )
 
 
