@@ -10,6 +10,12 @@ from __future__ import annotations
 import argparse
 import sys
 from dataclasses import dataclass
+from pathlib import Path
+
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
 from typing import Mapping
 
 from agent_runtime.openai_agent import AgentSpec, run_agent
@@ -52,12 +58,26 @@ AGENTS: Mapping[str, OccupationalAgent] = {
 }
 
 
+def get_agent(agent_id: str) -> OccupationalAgent:
+    try:
+        return AGENTS[agent_id]
+    except KeyError as exc:
+        raise KeyError(f"Unknown occupational agent ID: {agent_id}") from exc
+
+
+def build_spec(agent_id: str) -> AgentSpec:
+    agent = get_agent(agent_id)
+    return AgentSpec(name=agent.label, instructions=instructions_for(agent_id))
+
+
 def instructions_for(agent_id: str) -> str:
-    agent = AGENTS[agent_id]
-    rules = "\n".join(f"- {rule}" for rule in agent.guardrails)
+    agent = get_agent(agent_id)
     common = "\n".join(f"- {rule}" for rule in _COMMON)
+    role_rules = "\n".join(
+        f"- {rule}" for rule in agent.guardrails if rule not in _COMMON
+    )
     return (f"You are {agent.label} in the {agent.sector} sector.\n\n"
-            f"Mission: {agent.mission}\n\nOperating rules:\n{common}\n{rules}\n\n"
+            f"Mission: {agent.mission}\n\nOperating rules:\n{common}\n{role_rules}\n\n"
             "Output: concise executive summary; evidence and provenance; analysis; risks/uncertainties; proposed next steps; approvals required. "
             "Respond in the user's language.")
 
@@ -78,7 +98,7 @@ def main() -> int:
     request = " ".join(args.request).strip() or sys.stdin.read().strip()
     if not request:
         parser.error("provide a task as arguments or through stdin")
-    spec = AgentSpec(name=AGENTS[args.agent_id].label, instructions=instructions_for(args.agent_id))
+    spec = build_spec(args.agent_id)
     try:
         print(run_agent(spec, request, args.model))
         return 0
