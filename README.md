@@ -101,3 +101,11 @@ python agents/portfolio_agent.py --agent-id money-agent "Przygotuj plan uporząd
 ## Zasada wdrożenia
 
 Najpierw powstaje wspólny kontrakt agenta i testowalny rdzeń. Następnie dokładane są adaptery narzędziowe, permissioning, approval gates, idempotency, audit i postcondition verification. Agent nie może twierdzić, że wykonał akcję, której faktycznie nie wykonał.
+
+
+## Batch: Polish Primary School Tutor Agents
+
+Raport SAAD dla polskiej szkoły podstawowej został przełożony na **23 wyspecjalizowane, wykonywalne agenty korepetytorskie**:
+`mentor-odkrywcow`, `playful-polyglot`, `kustosz-slowa`, `kronikarz-analityczny`, `globalny-komunikator`, `straznik-tozsamosci`, `mistrz-logiki`, `architekt-cyfrowy`, `przewodnik-terenowy`, `bio-eksplorator`, `geo-strateg`, `laborant-teoretyczny`, `fizyk-fundamentalny`, `wizjoner-estetyczny`, `maestro-dzwieku`, `inzynier-bezpieczenstwa`, `aktywista-demokratyczny`, `coach-dobrostanu`, `instruktor-reagowania-kryzysowego`, `trener-teoretyk`, `architekt-kariery`, `mediator-klasowy` oraz `filozof-moralny`.
+
+Każdy agent ma własny entrypoint pod `agents/school-*/agent.py`, korzysta ze wspólnego runtime'u `AgentSpec/run_agent` i jest zarejestrowany w `agent_runtime/registry.py`. Pakiet ma osobny test integracyjny `tests/test_school_tutors.py` sprawdzający rejestrację, zgodność ścieżek, kompilację oraz kontrakty bezpieczeństwa. Dla treści aktualnych prawnie lub programowo agent ma wymagać bieżących źródeł zamiast traktować raport jako niezmienny stan prawa.
