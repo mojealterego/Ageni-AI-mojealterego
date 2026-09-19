@@ -1,4 +1,4 @@
-"""Tests for the 41-agent portfolio batch and its safety contract."""
+"""Tests for the portfolio agent catalog and its safety contract."""
 import py_compile
 import unittest
 from pathlib import Path
@@ -19,6 +19,9 @@ EXPECTED = {
     "synthetic-media-disinformation-detector", "cognitive-privacy-governance", "agent-forge",
     "causal-systems-research", "ai-coding-workflow-engineer", "pdf-rag-quality",
     "datasheet-spice-model-extractor", "godot-gaussian-splatting-integrator", "omnicore-forge",
+
+    "gemini-agent-builder", "gemini-desktop-builder", "gemini-android-builder",
+    "gemini-edge-rag", "gemini-security-auditor", "gemini-multiagent-orchestrator",
 }
 
 class PortfolioBatchTests(unittest.TestCase):
@@ -64,6 +67,13 @@ class PortfolioBatchTests(unittest.TestCase):
             "datasheet-spice-model-extractor": "agents/datasheet-spice-model-extractor/agent.py",
             "godot-gaussian-splatting-integrator": "agents/godot-gaussian-splatting-integrator/agent.py",
             "omnicore-forge": "agents/omnicore-forge/agent.py",
+
+            "gemini-agent-builder": "agents/gemini-agent-builder/agent.py",
+            "gemini-desktop-builder": "agents/gemini-desktop-builder/agent.py",
+            "gemini-android-builder": "agents/gemini-android-builder/agent.py",
+            "gemini-edge-rag": "agents/gemini-edge-rag/agent.py",
+            "gemini-security-auditor": "agents/gemini-security-auditor/agent.py",
+            "gemini-multiagent-orchestrator": "agents/gemini-multiagent-orchestrator/agent.py",
         }
         registry = {e.agent_id: e.entrypoint for e in list_agents()}
         for agent_id, entrypoint in specialized.items():
