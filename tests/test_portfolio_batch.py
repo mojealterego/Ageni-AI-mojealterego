@@ -74,11 +74,44 @@ class PortfolioBatchTests(unittest.TestCase):
             "gemini-edge-rag": "agents/gemini-edge-rag/agent.py",
             "gemini-security-auditor": "agents/gemini-security-auditor/agent.py",
             "gemini-multiagent-orchestrator": "agents/gemini-multiagent-orchestrator/agent.py",
+            "system-kernel-engineer": "agents/system-kernel-engineer/agent.py",
+            "gamedev-engineer": "agents/gamedev-engineer/agent.py",
+            "creative-writing-room": "agents/creative-writing-room/agent.py",
+            "comic-visual-continuity": "agents/comic-visual-continuity/agent.py",
+            "boardgame-ludology": "agents/boardgame-ludology/agent.py",
+            "quality-diversity-engineer": "agents/quality-diversity-engineer/agent.py",
+            "frontend-design-to-code": "agents/frontend-design-to-code/agent.py",
         }
         registry = {e.agent_id: e.entrypoint for e in list_agents()}
         for agent_id, entrypoint in specialized.items():
             self.assertEqual(registry[agent_id], entrypoint)
             py_compile.compile(str(ROOT / entrypoint), doraise=True)
+
+    def test_all_registered_entrypoints_exist(self):
+        missing = [
+            (entry.agent_id, entry.entrypoint)
+            for entry in list_agents()
+            if not (ROOT / entry.entrypoint).is_file()
+        ]
+        self.assertEqual(missing, [])
+
+    def test_report_specialists_keep_domain_contracts(self):
+        required = {
+            "gamedev-engineer": ("bounded", "deterministic", "benchmark"),
+            "creative-writing-room": ("canon", "continuity", "provenance"),
+            "comic-visual-continuity": ("continuity", "reference", "acceptance"),
+            "boardgame-ludology": ("self-play", "MCTS", "MAP-Elites"),
+            "quality-diversity-engineer": ("MAP-Elites", "Novelty Search", "reproducibility"),
+            "frontend-design-to-code": ("responsive", "accessibility", "validation"),
+            "system-kernel-engineer": ("unsafe", "FFI", "verification"),
+            "kernel-systems-engineer": ("nested virtualization", "rollback", "RAG"),
+        }
+        registry = {e.agent_id: e.entrypoint for e in list_agents()}
+        for agent_id, phrases in required.items():
+            self.assertIn(agent_id, registry)
+            source = (ROOT / registry[agent_id]).read_text(encoding='utf-8')
+            for phrase in phrases:
+                self.assertIn(phrase, source)
 
 if __name__ == "__main__":
     unittest.main()
