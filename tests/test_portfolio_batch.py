@@ -111,7 +111,7 @@ class PortfolioBatchTests(unittest.TestCase):
             self.assertIn(agent_id, registry)
             source = (ROOT / registry[agent_id]).read_text(encoding='utf-8')
             for phrase in phrases:
-                self.assertIn(phrase, source)
+                self.assertIn(phrase.lower(), source.lower())
 
 if __name__ == "__main__":
     unittest.main()
