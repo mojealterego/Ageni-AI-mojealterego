@@ -115,6 +115,19 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("adult-ai-bdsm-task-manager","BDSM Task Manager","agents/adult-ai-bdsm-task-manager/agent.py","Consent-first adult task and boundary planning without physical-device control or coercive enforcement."),
     AgentEntry("adult-ai-legacy-archivist","Legacy Archivist","agents/adult-ai-legacy-archivist/agent.py","Consent-controlled personal and family memory archiving with provenance, review and deletion controls."),
 
+    # Youth AI specialist batch
+    AgentEntry("youth-ai-fintech-guardian","Skarbnik — Fintech Guardian","agents/youth-ai-fintech-guardian/agent.py","Financial literacy, scam awareness and safe money habits for young people."),
+    AgentEntry("youth-ai-bio-optimizer","Bio-Optymizer","agents/youth-ai-bio-optimizer/agent.py","Evidence-aware healthy routines without diagnosis, restrictive targets or unsafe biohacking."),
+    AgentEntry("youth-ai-digital-stylist","Stylista Cyfrowy","agents/youth-ai-digital-stylist/agent.py","Personal style, wardrobe planning and sustainable choices without body or attractiveness ratings."),
+    AgentEntry("youth-ai-esports-strategist","Strateg E-sportowy","agents/youth-ai-esports-strategist/agent.py","Game strategy, fair play and healthy play-life balance without covert monitoring."),
+    AgentEntry("youth-ai-agor-civic","Agor — Civic Activator","agents/youth-ai-agor-civic/agent.py","Civic literacy and lawful community action with neutral political context and explicit review."),
+    AgentEntry("youth-ai-spiritual-compass","Duchowy Kompas","agents/youth-ai-spiritual-compass/agent.py","Non-dogmatic reflection, mindfulness and values clarification for young people."),
+    AgentEntry("youth-ai-hype-curator","Kustosz Hype’u","agents/youth-ai-hype-curator/agent.py","Sneakers and collectibles research with authenticity, provenance and speculation guardrails."),
+    AgentEntry("youth-ai-energy-regulator","Regulator Energii","agents/youth-ai-energy-regulator/agent.py","Voluntary planning for social energy, pacing, breaks and personal boundaries."),
+    AgentEntry("youth-ai-meme-historian","Archiwista Memów","agents/youth-ai-meme-historian/agent.py","Meme provenance, internet-culture context and media-literacy support."),
+    AgentEntry("youth-ai-safe-party-planner","Organizator Imprez","agents/youth-ai-safe-party-planner/agent.py","Age-appropriate, substance-free event planning with safety, accessibility and return-home safeguards."),
+    AgentEntry("youth-ai-parasocial-manager","Coach Relacji AI","agents/youth-ai-parasocial-manager/agent.py","Healthy boundaries around creators, streamers and AI companions without diagnosis or dependency manipulation."),
+
     # Child AI specialist batch
     AgentEntry("child-ai-education-agent","Child AI Education Agent","agents/child-ai-education-agent/agent.py","Age-appropriate tutoring, curriculum alignment and academic-integrity controls."),
     AgentEntry("child-ai-sel-agent","Child AI Social-Emotional Learning Agent","agents/child-ai-sel-agent/agent.py","Non-clinical SEL interactions with developmental and escalation boundaries."),
