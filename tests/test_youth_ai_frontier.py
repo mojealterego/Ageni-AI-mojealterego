@@ -30,7 +30,7 @@ GUARDS = {
     "youth-ai-esports-strategist": ("real-time", "covertly", "fair play"),
     "youth-ai-agor-civic": ("neutral factual", "political", "explicit review"),
     "youth-ai-spiritual-compass": ("astrology", "not evidence-based", "do not"),
-    "youth-ai-hype-curator": ("authenticity", "speculation", "payment credentials"),
+    "youth-ai-hype-curator": ("authenticity", "speculative", "payment credentials"),
     "youth-ai-energy-regulator": ("do not diagnose", "hidden calendar", "user control"),
     "youth-ai-meme-archivist": ("provenance", "harassment", "do not invent"),
     "youth-ai-safe-party-planner": ("without alcohol", "trusted adult", "explicit user"),
