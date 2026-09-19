@@ -14,7 +14,7 @@ from typing import Any, Mapping
 PLATFORMS = frozenset({"desktop-python", "android-kotlin", "hybrid"})
 RISK_LEVELS = frozenset({"low", "medium", "high", "critical"})
 SENSITIVE_TOOL_WORDS = re.compile(r"(sms|call|payment|transfer|delete|purchase|shell|exec|chmod|sudo|iam|firewall)", re.I)
-SECRET_VALUE_WORDS = re.compile(r"(api[_-]?key|token|secret|password)\\s*[:=]\\s*[^$\\s}]+", re.I)
+SECRET_VALUE_WORDS = re.compile(r"(api[_-]?key|token|secret|password)\s*[:=]\s*[^$\s}]+", re.I)
 
 
 @dataclass(frozen=True)
@@ -198,10 +198,10 @@ def validate_untrusted_tool_code(source: str) -> list[str]:
     if not source.strip():
         findings.append("tool source is empty")
     dangerous = [
-        (r"(^|\\n)\\s*exec\\s*\\(", "dynamic exec"),
-        (r"(^|\\n)\\s*eval\\s*\\(", "dynamic eval"),
-        (r"os\\.system\\s*\\(", "shell execution"),
-        (r"subprocess\\.(run|Popen|call)\\s*\\(", "subprocess execution"),
+        (r"(^|\n)\s*exec\s*\(", "dynamic exec"),
+        (r"(^|\n)\s*eval\s*\(", "dynamic eval"),
+        (r"os\.system\s*\(", "shell execution"),
+        (r"subprocess\.(run|Popen|call)\s*\(", "subprocess execution"),
         (r"open\\([^)]*,\\s*['\"]w", "unbounded file write"),
     ]
     for pattern, label in dangerous:
