@@ -96,6 +96,15 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("adult-ai-evaluation-agent","Adult AI Companion Evaluation Agent","agents/adult-ai-evaluation-agent/agent.py","Quality, safety, consent, privacy and operations evaluation."),
     AgentEntry("adult-ai-anti-impersonation-agent","Adult AI Anti-Impersonation Agent","agents/adult-ai-anti-impersonation-agent/agent.py","Likeness, voice, provenance and rights safeguards."),
     AgentEntry("adult-ai-operations-agent","Adult AI Companion Operations Agent","agents/adult-ai-operations-agent/agent.py","Production operations, routing, budgets, incidents and rollback controls."),
+    AgentEntry("adult-ai-bio-conductor","Bio-Conductor","agents/adult-ai-bio-conductor/agent.py","Adult biofeedback and haptic architecture with explicit consent, deterministic safety control and biometric uncertainty."),
+    AgentEntry("adult-ai-haptic-composer","Haptic Composer","agents/adult-ai-haptic-composer/agent.py","Declarative semantic-to-haptic planning separated from hardware actuation and bounded by safety policy."),
+    AgentEntry("adult-ai-the-mirror","The Mirror","agents/adult-ai-the-mirror/agent.py","Transparent communication reflection without covert manipulation, diagnosis or adversarial impersonation."),
+    AgentEntry("adult-ai-the-anchor","The Anchor","agents/adult-ai-the-anchor/agent.py","Non-clinical grounding and self-regulation architecture with crisis and human-handoff boundaries."),
+    AgentEntry("adult-ai-poly-dynamics-simulator","Poly-Dynamics Simulator","agents/adult-ai-poly-dynamics-simulator/agent.py","Fictional multi-adult relationship simulation with explicit per-person consent and state."),
+    AgentEntry("adult-ai-social-turing-tester","Social Turing Tester","agents/adult-ai-social-turing-tester/agent.py","Difficult-conversation rehearsal with transparent simulation, communication analysis and anti-manipulation controls."),
+    AgentEntry("adult-ai-the-auteur","The Auteur","agents/adult-ai-the-auteur/agent.py","Adult-oriented AI video orchestration with consent, rights, provenance, moderation and release gates."),
+    AgentEntry("adult-ai-ludonarrative-weaver","Ludonarrative Weaver","agents/adult-ai-ludonarrative-weaver/agent.py","Stateful adult RPG and interactive-fiction design with explicit boundaries and reset controls."),
+    AgentEntry("adult-ai-srh-educator","Adult SRH Educator","agents/adult-ai-srh-educator/agent.py","Evidence-oriented sexual and reproductive health education with adult age-gating and clinical boundaries."),
 
     # Child AI specialist batch
     AgentEntry("child-ai-education-agent","Child AI Education Agent","agents/child-ai-education-agent/agent.py","Age-appropriate tutoring, curriculum alignment and academic-integrity controls."),
