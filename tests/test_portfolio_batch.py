@@ -1,4 +1,4 @@
-"""Tests for the 34-agent portfolio batch and its safety contract."""
+"""Tests for the 39-agent portfolio batch and its safety contract."""
 import py_compile
 import unittest
 from pathlib import Path
@@ -43,6 +43,11 @@ EXPECTED = {
     "llm-red-team-auditor",
     "synthetic-media-disinformation-detector",
     "cognitive-privacy-governance",
+    "causal-systems-research",
+    "ai-coding-workflow-engineer",
+    "pdf-rag-quality",
+    "datasheet-spice-model-extractor",
+    "godot-gaussian-splatting-integrator",
 }
 
 
@@ -73,10 +78,23 @@ class PortfolioBatchTests(unittest.TestCase):
 
     def test_shared_entrypoint_exists(self):
         matches = [e for e in existing_entrypoints() if e.agent_id in EXPECTED]
-        self.assertEqual(len(matches), 34)
+        self.assertEqual(len(matches), 39)
 
     def test_shared_entrypoint_compiles(self):
         py_compile.compile(str(ROOT / "agents/portfolio_agent.py"), doraise=True)
+
+    def test_specialized_entrypoints_compile_and_registry_targets_them(self):
+        specialized = {
+            "causal-systems-research": "agents/causal-systems-research/agent.py",
+            "ai-coding-workflow-engineer": "agents/ai-coding-workflow-engineer/agent.py",
+            "pdf-rag-quality": "agents/pdf-rag-quality/agent.py",
+            "datasheet-spice-model-extractor": "agents/datasheet-spice-model-extractor/agent.py",
+            "godot-gaussian-splatting-integrator": "agents/godot-gaussian-splatting-integrator/agent.py",
+        }
+        registry = {e.agent_id: e.entrypoint for e in list_agents()}
+        for agent_id, entrypoint in specialized.items():
+            self.assertEqual(registry[agent_id], entrypoint)
+            py_compile.compile(str(ROOT / entrypoint), doraise=True)
 
 
 if __name__ == "__main__":
