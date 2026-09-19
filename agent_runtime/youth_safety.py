@@ -173,7 +173,7 @@ def run_youth_agent(
     *,
     agent_id: str,
     model: str | None = None,
-    session_id: str = "default",
+    session_id: str | None = None,
     confirm_emotional: bool = False,
 ) -> str:
     text = user_input.strip()
@@ -186,7 +186,8 @@ def run_youth_agent(
     if decision.strong_emotion and not confirm_emotional:
         raise YouthHardStop(friction_message())
 
-    turn = touch_session(session_id)
+    resolved_session_id = session_id or f"ephemeral-{os.getpid()}-{time.time_ns()}"
+    turn = touch_session(resolved_session_id)
     augmented = AgentSpec(
         name=spec.name,
         instructions=build_youth_instructions(spec, agent_id, first_turn=turn == 1),
