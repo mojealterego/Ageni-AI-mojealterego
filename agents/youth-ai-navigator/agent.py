@@ -27,11 +27,13 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=SPEC.name)
     parser.add_argument("request", nargs="*")
     parser.add_argument("--model", default=None)
-    parser.add_argument("--session-id", default="default")
+    parser.add_argument("--session-id", default=None)
     parser.add_argument("--confirm-emotional", action="store_true")
     parser.add_argument("--reset-session", action="store_true")
     args = parser.parse_args()
     if args.reset_session:
+        if not args.session_id:
+            parser.error("--session-id is required with --reset-session")
         reset_session(args.session_id)
         print("Sesja została zresetowana.")
         return 0
