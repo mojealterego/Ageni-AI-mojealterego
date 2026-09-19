@@ -37,7 +37,9 @@ The five core entrypoints are registered in `agent_runtime/registry.py` under:
 - `youth-ai-verifier`
 - `youth-ai-wellness-buffer`
 
-The integration test is `tests/test_youth_ai_ecosystem.py`. It checks registry membership, exact entrypoint paths, Python compilation, shared-runtime usage and the presence of key role/safety contract text.
+The unified CLI is `agents/youth-ai-ecosystem/runner.py`. Example: `python agents/youth-ai-ecosystem/runner.py --agent-id sokrates "Wyjaśnij ułamki zwykłe."`.
+
+The integration test is `tests/test_youth_ai_ecosystem.py`. It checks registry membership, exact entrypoint paths, Python compilation, shared-runtime usage, unified-runner compilation and the presence of key role/safety contract text.
 
 This repository's tests are static/offline checks. They do **not** constitute clinical validation, child-safety certification, legal compliance, red-team completion, or proof that a model will follow every instruction under adversarial prompting.
 
