@@ -5,12 +5,12 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **39 agentów portfolio, w tym 5 wyspecjalizowanych agentów badawczo-inżynierskich**: 10 B2B + 10 mobile + 7 monetization + 7 cognitive-safety.
+- **40 agentów portfolio, w tym 6 wyspecjalizowanych agentów badawczo-inżynierskich**: 10 B2B + 10 mobile + 7 monetization + 7 cognitive-safety.
 - Wszyscy agenci portfolio są wykonywalni przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
 
-## 39 agentów
+## 40 agentów
 
 | `agent-policy-gateway` | **Agent Policy Gateway** | Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate identity, scope, risk, data sensitivity, policy conflict, approval and audit requirements. |
 | `agent-ops-control-tower` | **Agent Ops Control Tower** | Analyze agent executions, approvals, failures, latency, model usage and cost; separate observed telemetry from inferred causes. |
@@ -49,7 +49,7 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 
 ## Nowy batch: research, agentic engineering i document intelligence
 
-Pięć tematów z kolejnego pakietu zostało przełożonych na osobne wykonywalne entrypointy: `causal-systems-research`, `ai-coding-workflow-engineer`, `pdf-rag-quality`, `datasheet-spice-model-extractor` oraz `godot-gaussian-splatting-integrator`. Każdy ma własny kontrakt operacyjny i może zostać później podpięty do adapterów narzędziowych.
+Pięć tematów z kolejnego pakietu zostało przełożonych na osobne wykonywalne entrypointy: `agent-forge`, `causal-systems-research`, `ai-coding-workflow-engineer`, `pdf-rag-quality`, `datasheet-spice-model-extractor` oraz `godot-gaussian-splatting-integrator`. Każdy ma własny kontrakt operacyjny i może zostać później podpięty do adapterów narzędziowych.
 
 ## Nowy batch: monetyzacja AI
 
