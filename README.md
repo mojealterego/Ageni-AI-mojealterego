@@ -172,14 +172,15 @@ Każdy agent ma własny entrypoint pod `agents/school-*/agent.py`, korzysta ze w
 
 ## Batch: Vocational and Technical School Tutors
 
-Raport dotyczący autonomicznych korepetytorów dla polskiego szkolnictwa zawodowego i technicznego został przełożony na **11 wykonywalnych agentów**:
+Raport dotyczący autonomicznych korepetytorów dla polskiego szkolnictwa zawodowego i technicznego został przełożony na **11 wykonywalnych profili**:
 
-`vocational-polonista`, `vocational-matematyk`, `vocational-jezyk-zawodowy`, `vocational-sysadmin-inf02`, `vocational-web-inf03`, `vocational-mechanik-cnc`, `vocational-budownictwo`, `vocational-ekonomista`, `vocational-gastronomia`, `vocational-biznes-mentor` oraz `vocational-edb`.
+`polonista`, `matematyka`, `jezyki`, `inf02`, `inf03`, `mechanik`, `budownictwo`, `ekonomista`, `gastronomia`, `biznes` oraz `edb`.
 
-Każdy agent ma osobny entrypoint pod `agents/vocational-*/agent.py`, korzysta ze wspólnego `AgentSpec/run_agent` i jest zarejestrowany w `agent_runtime/registry.py`. Pakiet ma również zunifikowany runner `agents/vocational-ai-ecosystem/runner.py` oraz test integracyjny `tests/test_vocational_tutors.py`.
+Wspólny entrypoint znajduje się w `agents/vocational-tutors/agents.py`, a definicje są zarejestrowane w `agent_runtime/registry.py`. Runner korzysta ze wspólnego `AgentSpec` oraz deterministycznej warstwy `agent_runtime/youth_safety.py` obejmującej limity sesji, hard-stop wybranych wzorców zagrożenia i kontrolę odpowiedzi.
 
-Kontrakty dydaktyczne obejmują scaffolding i academic-integrity controls, źródłową weryfikację aktualnych wymagań programu/egzaminu oraz dodatkowe guardraile dla cyberbezpieczeństwa, CNC, budownictwa, księgowości, gastronomii i pierwszej pomocy. Raport nie jest traktowany jako niezmienny stan prawa, podstawy programowej, stawek podatkowych, norm technicznych ani wytycznych medycznych.
+Zakres dydaktyczny obejmuje język polski, matematykę STEM, języki zawodowe, INF.02, INF.03, mechanikę/CNC, budownictwo, ekonomię, gastronomię, biznes i EDB. Aktualne wymagania CKE/MEN, przepisy, stawki, normy i procedury muszą być każdorazowo weryfikowane z właściwymi źródłami; raport pozostaje specyfikacją projektową, a nie źródłem prawa.
 
+Testy integracyjne: `tests/test_vocational_tutors.py`.
 
 ## Youth AI — deployment validation
 
