@@ -46,7 +46,7 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("faceless-video","Faceless Video Agent","agents/portfolio_agent.py","Repeatable faceless-video channel planning, production workflow and analytics."),
     AgentEntry("micro-saas","Micro-SaaS Agent","agents/portfolio_agent.py","Micro-product discovery, MVP scope, economics, launch and retention planning."),
     AgentEntry("ai-trading-risk","AI Trading Risk Agent","agents/portfolio_agent.py","Backtesting, scenario analysis and trading-risk evaluation without trade execution."),
-    AgentEntry("ai-freelance-ops","AI Freelance Operations Agent","agents/portfolio_agent.py","Freelance and productized-service packaging, delivery, QA and capacity planning.")
+    AgentEntry("ai-freelance-ops","AI Freelance Operations Agent","agents/portfolio_agent.py","Freelance and productized-service packaging, delivery, QA and capacity planning."),
     AgentEntry("cognitive-profiling-auditor","Cognitive Profiling Auditor","agents/portfolio_agent.py","Audit of inferred-personality profiling, validity, consent, inference limits and decision-impact risk."),
     AgentEntry("persuasion-dark-patterns-auditor","Persuasion & Dark-Patterns Auditor","agents/portfolio_agent.py","Detection and documentation of coercive persuasion, deceptive scarcity and dark UX patterns."),
     AgentEntry("affective-ai-evaluator","Affective AI Evaluator","agents/portfolio_agent.py","Evaluation of emotion-recognition, facial-coding, voice-affect and biometric analytics."),
