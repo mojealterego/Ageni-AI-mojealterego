@@ -5,7 +5,7 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **140 agentów w rejestrze**. Wśród nich są agenty portfolio, batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps, Child AI, Adult AI oraz nowy batch Youth AI.
+- **159 agentów w rejestrze**. Wśród nich są agenty portfolio, batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps, Child AI, Adult AI oraz nowy batch Youth AI.
 - Wszyscy agenci portfolio są wykonywalni przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
@@ -142,6 +142,15 @@ python agents/portfolio_agent.py --agent-id money-agent "Przygotuj plan uporząd
 
 Najpierw powstaje wspólny kontrakt agenta i testowalny rdzeń. Następnie dokładane są adaptery narzędziowe, permissioning, approval gates, idempotency, audit i postcondition verification. Agent nie może twierdzić, że wykonał akcję, której faktycznie nie wykonał.
 
+
+## Batch: Autonomous Anomaly / Frontier Agents
+
+Najnowszy pakiet został przełożony na **19 wykonywalnych agentów** inspirowanych kompendium systemów wetware, autonomii ekonomicznej, artificial life, computational creativity, emergent communication i scientific discovery.
+
+Entry-pointy:
+`xenobot-research-agent`, `dishbrain-agent`, `hybrot-agent`, `terra0-agent`, `plantoid-agent`, `truth-terminal-agent`, `mr-goxx-agent`, `chaosgpt-safety-agent`, `tay-resilience-agent`, `aaron-creative-agent`, `painting-fool-agent`, `botto-curator-agent`, `polyworld-agent`, `lenia-agent`, `ai-steve-civic-agent`, `emergent-language-agent`, `coscientist-agent`, `chemcrow-safety-agent` oraz `genefer-prime-search-agent`.
+
+Batch korzysta ze wspólnego `AgentSpec/run_agent` i ma test integracyjny `tests/test_anomaly_agents.py`. Wysokiego ryzyka możliwości zostały zamodelowane jako symulacja, analiza lub planowanie z bramkami autoryzacji: brak autonomicznego handlu, realnych transakcji, politycznej perswazji, manipulacji informacyjnej, operacji wet-lab oraz nieograniczonego sterowania sprzętem.
 
 ## Batch: Polish Primary School Tutor Agents
 
