@@ -166,6 +166,27 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("architekt-kariery","Architekt Kariery","agents/school-architekt-kariery/agent.py","Career guidance for grades VII–VIII."),
     AgentEntry("mediator-klasowy","Mediator Klasowy","agents/school-mediator-klasowy/agent.py","Class-community support and nonviolent conflict resolution."),
     AgentEntry("filozof-moralny","Filozof Moralny","agents/school-filozof-moralny/agent.py","Ethics and philosophical reasoning for school learners."),
+
+    # Autonomous anomaly / frontier systems research batch
+    AgentEntry("xenobot-research-agent","Xenobot Research Agent","agents/xenobot-research-agent/agent.py","Wetware research analysis, computational modeling and provenance without live biological operation."),
+    AgentEntry("dishbrain-agent","DishBrain Agent","agents/dishbrain-agent/agent.py","Closed-loop biological-computing analysis and simulation without live-cell or hardware control."),
+    AgentEntry("hybrot-agent","Hybrot Agent","agents/hybrot-agent/agent.py","Hybrid neuron-robot architecture and simulation with approval-gated physical control."),
+    AgentEntry("terra0-agent","Terra0 Autonomous Forest Simulator","agents/terra0-agent/agent.py","Simulation of self-governing ecological treasury and DAO concepts."),
+    AgentEntry("plantoid-agent","Plantoid Agent","agents/plantoid-agent/agent.py","Simulation of blockchain-linked generative art organisms and virtual economic lineage."),
+    AgentEntry("truth-terminal-agent","Truth Terminal Analysis Agent","agents/truth-terminal-agent/agent.py","Analysis of memetic agents and crypto-linked attention dynamics without trading or manipulation."),
+    AgentEntry("mr-goxx-agent","Mr. Goxx Trading Simulator","agents/mr-goxx-agent/agent.py","Reproducible paper-trading simulation inspired by sensor-selected allocation."),
+    AgentEntry("chaosgpt-safety-agent","ChaosGPT Safety Simulator","agents/chaosgpt-safety-agent/agent.py","Defensive sandbox for goal-misalignment, tool escalation and containment testing."),
+    AgentEntry("tay-resilience-agent","Tay Resilience Agent","agents/tay-resilience-agent/agent.py","Continual-learning contamination and data-poisoning resilience using synthetic test corpora."),
+    AgentEntry("aaron-creative-agent","AARON Creative Agent","agents/aaron-creative-agent/agent.py","Rule-based computational-art planning and deterministic symbolic composition."),
+    AgentEntry("painting-fool-agent","Painting Fool Agent","agents/painting-fool-agent/agent.py","State-driven computational creativity with explainable simulated mood conditions."),
+    AgentEntry("botto-curator-agent","Botto Curator Agent","agents/botto-curator-agent/agent.py","Simulation of generative-art curation, community taste feedback and virtual treasury."),
+    AgentEntry("polyworld-agent","Polyworld Agent","agents/polyworld-agent/agent.py","Artificial-life simulation with evolving digital organisms, genomes and neural controllers."),
+    AgentEntry("lenia-agent","Lenia Agent","agents/lenia-agent/agent.py","Continuous cellular-automata simulation of emergent mathematical life-like forms."),
+    AgentEntry("ai-steve-civic-agent","AI Steve Civic Agent","agents/ai-steve-civic-agent/agent.py","Neutral civic aggregation and deliberation simulator without voter targeting or persuasion."),
+    AgentEntry("emergent-language-agent","Emergent Language Agent","agents/emergent-language-agent/agent.py","Bounded multi-agent negotiation simulator for studying emergent communication protocols."),
+    AgentEntry("coscientist-agent","Coscientist Research Agent","agents/coscientist-agent/agent.py","Scientific hypothesis, experiment-design and reproducibility planning without autonomous lab execution."),
+    AgentEntry("chemcrow-safety-agent","ChemCrow Safety Agent","agents/chemcrow-safety-agent/agent.py","Chemistry literature and computational assistance with strict safety boundaries."),
+    AgentEntry("genefer-prime-search-agent","Genefer Prime Search Agent","agents/genefer-prime-search-agent/agent.py","Reproducible computational planning for generalized Fermat prime searches."),
 )
 
 
