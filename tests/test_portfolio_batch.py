@@ -87,11 +87,24 @@ class PortfolioBatchTests(unittest.TestCase):
             "agent-supervisor-killswitch": "agents/agent-supervisor-killswitch/agent.py",
             "realtime-crisis-manager": "agents/realtime-crisis-manager/agent.py",
             "agent-evaluation-ops": "agents/agent-evaluation-ops/agent.py",
+            "child-ai-safety-architect": "agents/child-ai-safety-architect/agent.py",
+            "child-ai-ecosystem-architect": "agents/child-ai-ecosystem-architect/agent.py",
         }
         registry = {e.agent_id: e.entrypoint for e in list_agents()}
         for agent_id, entrypoint in specialized.items():
             self.assertEqual(registry[agent_id], entrypoint)
             py_compile.compile(str(ROOT / entrypoint), doraise=True)
+
+    def test_child_ai_agents_have_explicit_safety_contract(self):
+        contracts = {
+            "child-ai-safety-architect": ("do not design dependency-inducing mechanics", "memory poisoning", "physical / robot safety"),
+            "child-ai-ecosystem-architect": ("developmental model", "child safety testing", "hard boundaries"),
+        }
+        registry = {e.agent_id: e.entrypoint for e in list_agents()}
+        for agent_id, phrases in contracts.items():
+            source = (ROOT / registry[agent_id]).read_text(encoding="utf-8")
+            for phrase in phrases:
+                self.assertIn(phrase.lower(), source.lower())
 
     def test_all_registered_entrypoints_exist(self):
         missing = [
@@ -117,6 +130,8 @@ class PortfolioBatchTests(unittest.TestCase):
             "agent-supervisor-killswitch": ("kill switch", "budget", "circuit"),
             "realtime-crisis-manager": ("latency", "speed path", "fail-safe"),
             "agent-evaluation-ops": ("golden", "drift", "circuit-breaker"),
+            "child-ai-safety-architect": ("age", "parent", "deletion", "robot"),
+            "child-ai-ecosystem-architect": ("age-band", "data-flow", "kill-switch", "adult oversight"),
         }
         registry = {e.agent_id: e.entrypoint for e in list_agents()}
         for agent_id, phrases in required.items():
