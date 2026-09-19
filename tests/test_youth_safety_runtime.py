@@ -86,7 +86,8 @@ class YouthSafetyRuntimeTests(unittest.TestCase):
                 touch_session("budget-test")
             files = os.listdir(tmp)
             self.assertEqual(len(files), 1)
-            state = open(os.path.join(tmp, files[0]), encoding="utf-8").read()
+            with open(os.path.join(tmp, files[0]), encoding="utf-8") as handle:
+                state = handle.read()
             self.assertNotIn("tajna wiadomość", state)
 
     def test_reset_session_removes_only_session_metadata(self):
