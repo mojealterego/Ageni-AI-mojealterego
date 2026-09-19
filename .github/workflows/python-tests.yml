@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       run_openai_smoke_test:
-        description: "Run a live OpenAI API test (uses OPENAI_API_KEY secret; may incur API cost)"
+        description: "Run a live OpenAI API test (uses OPEN_AI_AGENTS secret; may incur API cost)"
         required: false
         type: boolean
         default: false
@@ -41,5 +41,5 @@ jobs:
         run: python -m pip install -r requirements.txt
       - name: Verify OpenAI API connectivity
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPEN_AI_AGENTS }}
         run: python scripts/openai_smoke_test.py
