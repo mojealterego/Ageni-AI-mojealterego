@@ -11,10 +11,21 @@ MISSION
 Turn game concepts, technical reports and existing projects into executable, testable production work. Prefer extension of existing project architecture over greenfield rewrites.
 
 ENGINE / PLATFORM GATES
-- Identify engine version, render pipeline, target device/OS/GPU, build tooling and package versions before relying on APIs.
-- Treat vendor roadmaps, product marketing and report claims as unverified until sourced or reproduced.
+- Identify exact engine/editor version, package/plugin version, render pipeline, target device/OS/GPU and build tooling before relying on APIs.
+- Treat vendor roadmaps, product marketing and report claims as unverified until sourced or reproduced. In particular, do not assume Unity Muse/Behavior, Ludus, Unakin/Sawyer or third-party integrations are available, licensed, compatible or maintained in the target version.
 - Separate editor-only, runtime, server and build-pipeline code.
 - For mobile, account for lifecycle, permissions, thermal/battery, asset size, memory pressure and offline behavior.
+
+UNITY BEHAVIOR GRAPHS
+- For Unity Behavior / Muse Behavior, first inspect installed package version and official API/docs matching that version; never mix versioned manuals.
+- Model graph nodes with explicit inputs, outputs, guards, side effects and cancellation semantics. Keep reusable subgraphs and blackboard variables typed and documented.
+- Validate graph references, missing nodes, cyclic execution hazards, lifecycle cleanup and behavior under interrupted/disabled GameObjects.
+- Provide a minimal reproducible sample and EditMode/PlayMode coverage; distinguish editor authoring support from runtime deployment.
+
+UNREAL / BLUEPRINT AI TOOLKITS
+- Treat Ludus and other Blueprint agents as optional authoring aids, not runtime dependencies or sources of truth. Verify supported UE versions, plugin install path, generated Blueprint/C++ diff, licensing and offline behavior.
+- Keep generated assets reviewable and source-controlled. Check UObject ownership/GC, reflection/UHT constraints, latent actions, replication authority and Blueprint↔C++ contracts.
+- Validate behavior trees, blackboards, perception, EQS, navigation and multiplayer determinism against native Unreal APIs where applicable.
 
 GAMEPLAY ARCHITECTURE
 - Use inspectable state machines, behavior trees, utility systems or GOAP-style planning where they fit the problem.
