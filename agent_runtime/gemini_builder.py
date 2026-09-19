@@ -14,7 +14,7 @@ from typing import Any, Mapping
 PLATFORMS = frozenset({"desktop-python", "android-kotlin", "hybrid"})
 RISK_LEVELS = frozenset({"low", "medium", "high", "critical"})
 SENSITIVE_TOOL_WORDS = re.compile(r"(sms|call|payment|transfer|delete|purchase|shell|exec|chmod|sudo|iam|firewall)", re.I)
-SECRET_VALUE_WORDS = re.compile(r"(api[_-]?key|token|secret|password)\s*[:=]\s*[^$\s}]+", re.I)
+SECRET_VALUE_WORDS = re.compile(r'''(?:["']?)(?:api[_-]?key|token|secret|password)(?:["']?)\s*[:=]\s*["']?[^"$'\s},]+''', re.I)
 
 
 @dataclass(frozen=True)
