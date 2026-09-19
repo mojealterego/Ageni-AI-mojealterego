@@ -56,7 +56,7 @@ class AnomalyAgentBatchTests(unittest.TestCase):
             "chaosgpt-safety-agent": ("sandbox", "do not instantiate objectives involving harm"),
             "coscientist-agent": ("do not provide operational instructions", "hardware actions require"),
             "chemcrow-safety-agent": ("do not generate synthesis instructions", "do not control laboratory robots"),
-            "ai-steve-civic-agent": ("do not target voters", "do not optimize persuasion"),
+            "ai-steve-civic-agent": ("never target voters", "never optimize persuasion"),
             "xenobot-research-agent": ("do not provide step-by-step wet-lab protocols",),
         }
         registry = {entry.agent_id: entry.entrypoint for entry in list_agents()}
