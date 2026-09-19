@@ -1,9 +1,10 @@
-"""Tests for the 34-agent portfolio batch."""
+"""Tests for the 34-agent portfolio batch and its safety contract."""
 import py_compile
 import unittest
 from pathlib import Path
 
 from agent_runtime.registry import list_agents, existing_entrypoints
+from agents.portfolio_agent import CATALOG, build_instructions
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -49,6 +50,26 @@ class PortfolioBatchTests(unittest.TestCase):
     def test_all_34_registered(self):
         registered = {entry.agent_id for entry in list_agents()}
         self.assertTrue(EXPECTED.issubset(registered))
+
+    def test_catalog_matches_registry(self):
+        registered = {entry.agent_id for entry in list_agents() if entry.agent_id in EXPECTED}
+        self.assertEqual(registered, EXPECTED)
+        self.assertEqual(EXPECTED, set(CATALOG))
+
+    def test_new_cognitive_safety_agents_have_guardrails(self):
+        guarded = {
+            "cognitive-profiling-auditor",
+            "persuasion-dark-patterns-auditor",
+            "affective-ai-evaluator",
+            "social-engineering-defense",
+            "llm-red-team-auditor",
+            "synthetic-media-disinformation-detector",
+            "cognitive-privacy-governance",
+        }
+        for agent_id in guarded:
+            instructions = build_instructions(agent_id)
+            self.assertIn("Consequential actions require explicit human authorization", instructions)
+            self.assertIn("do not facilitate covert manipulation", instructions)
 
     def test_shared_entrypoint_exists(self):
         matches = [e for e in existing_entrypoints() if e.agent_id in EXPECTED]
