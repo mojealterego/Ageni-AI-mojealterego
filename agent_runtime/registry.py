@@ -54,6 +54,12 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("llm-red-team-auditor","LLM Red-Team Auditor","agents/portfolio_agent.py","Authorized sandbox assessment of prompt injection, jailbreak resistance and tool/data abuse paths."),
     AgentEntry("synthetic-media-disinformation-detector","Synthetic Media & Disinformation Detector","agents/portfolio_agent.py","Provenance-based assessment of suspected deepfakes, astroturfing and synthetic-consensus signals."),
     AgentEntry("cognitive-privacy-governance","Cognitive Privacy Governance Agent","agents/portfolio_agent.py","Governance for behavioral, biometric and inferred-personality data, including high-risk advertising and political contexts.")
+
+    AgentEntry("causal-systems-research","Causal Systems Research Agent","agents/causal-systems-research/agent.py","Causal inference, identification audits and reproducible research validation."),
+    AgentEntry("ai-coding-workflow-engineer","AI Coding Workflow Engineer","agents/ai-coding-workflow-engineer/agent.py","Bounded agentic coding workflows, verification and adversarial repository review."),
+    AgentEntry("pdf-rag-quality","PDF Extraction & RAG Quality Agent","agents/pdf-rag-quality/agent.py","PDF/document forensics, provenance-preserving extraction and RAG evaluation."),
+    AgentEntry("datasheet-spice-model-extractor","Datasheet-to-SPICE Model Agent","agents/datasheet-spice-model-extractor/agent.py","Datasheet parameter extraction, candidate SPICE modeling and validation planning."),
+    AgentEntry("godot-gaussian-splatting-integrator","Godot Gaussian Splatting Integrator","agents/godot-gaussian-splatting-integrator/agent.py","Godot/Gaussian-Splatting compatibility, POC integration and performance validation."),
 )
 
 
