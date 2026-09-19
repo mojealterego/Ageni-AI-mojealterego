@@ -17,6 +17,8 @@ ENTRYPOINTS = {
 
 sys.path.insert(0, str(ROOT))
 
+from agent_runtime.youth_safety import YouthHardStop, YouthSessionLimit, reset_session, run_youth_agent
+
 
 def load_spec(agent_id: str):
     path = ENTRYPOINTS[agent_id]
@@ -26,20 +28,44 @@ def load_spec(agent_id: str):
         raise RuntimeError(f"Unable to load entrypoint: {path}")
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
-    return module.SPEC, module.run_agent
+    return module.SPEC
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Run a core Youth AI agent.")
+    parser = argparse.ArgumentParser(description="Run a core Youth AI agent with safety/session controls.")
     parser.add_argument("--agent-id", choices=sorted(ENTRYPOINTS), required=True)
     parser.add_argument("--model", default=None)
+    parser.add_argument("--session-id", default="default")
+    parser.add_argument("--confirm-emotional", action="store_true")
+    parser.add_argument("--reset-session", action="store_true")
     parser.add_argument("request", nargs="*", help="Task; stdin is used when omitted")
     args = parser.parse_args()
+
+    if args.reset_session:
+        reset_session(args.session_id)
+        print("Sesja została zresetowana.")
+        return 0
+
     request = " ".join(args.request).strip() or sys.stdin.read().strip()
     try:
-        spec, run_agent = load_spec(args.agent_id)
-        print(run_agent(spec, request, args.model))
+        spec = load_spec(args.agent_id)
+        print(
+            run_youth_agent(
+                spec,
+                request,
+                agent_id=args.agent_id,
+                model=args.model,
+                session_id=args.session_id,
+                confirm_emotional=args.confirm_emotional,
+            )
+        )
         return 0
+    except YouthHardStop as exc:
+        print(str(exc), file=sys.stderr)
+        return 3
+    except YouthSessionLimit as exc:
+        print(f"Session blocked: {exc}", file=sys.stderr)
+        return 4
     except ValueError as exc:
         print(f"Error: {exc}", file=sys.stderr)
         return 2
