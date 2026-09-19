@@ -54,14 +54,20 @@ class YouthAIEcosystemTests(unittest.TestCase):
             self.assertIn("run_agent(", source)
 
     def test_profile_catalog_has_exactly_five_core_agents(self):
-        self.assertEqual(set(ecosystem.AGENTS), set(CORE_IDS := {
+        self.assertEqual(set(ecosystem.AGENTS), {
             "sokrates",
             "kreator",
             "nawigator",
             "weryfikator",
             "bufor",
-        }))
+        })
         self.assertEqual(len(ecosystem.list_agents()), 5)
+
+    def test_unified_runner_compiles(self):
+        py_compile.compile(
+            str(ROOT / "agents/youth-ai-ecosystem/runner.py"),
+            doraise=True,
+        )
 
     def test_profile_metadata_contains_required_safety_contracts(self):
         required = {
