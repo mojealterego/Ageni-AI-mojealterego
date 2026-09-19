@@ -28,6 +28,13 @@ EXPECTED = {
     "travel-execution-agent",
     "health-navigator",
     "personal-knowledge-agent",
+    "aaa-automation-agency",
+    "ai-creator-monetization",
+    "programmatic-seo",
+    "faceless-video",
+    "micro-saas",
+    "ai-trading-risk",
+    "ai-freelance-ops",
 }
 
 
