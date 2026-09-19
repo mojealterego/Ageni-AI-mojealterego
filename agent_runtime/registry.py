@@ -110,6 +110,31 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("child-ai-content-moderation-agent","Child AI Content Moderation Agent","agents/child-ai-content-moderation-agent/agent.py","Age-banded content classification, filtering and escalation."),
     AgentEntry("child-ai-safety-architect","Child AI Safety Architect","agents/child-ai-safety-architect/agent.py","Child-directed AI safety, age-appropriate UX, privacy, parental controls, abuse resistance and evaluation."),
     AgentEntry("child-ai-ecosystem-architect","Child AI Ecosystem Architect","agents/child-ai-ecosystem-architect/agent.py","End-to-end architecture for child-facing tutors, companions, robots, generative toys and monitoring systems with safety and privacy gates."),
+
+    # School tutor specialist batch — Polish primary education
+    AgentEntry("mentor-odkrywcow","Mentor Odkrywców","agents/school-mentor-odkrywcow/agent.py","Integrated primary-school learning for grades I–III."),
+    AgentEntry("playful-polyglot","Playful Polyglot","agents/school-playful-polyglot/agent.py","Playful foreign-language learning for grades I–III."),
+    AgentEntry("kustosz-slowa","Kustosz Słowa","agents/school-kustosz-slowa/agent.py","Polish language, literature and writing for grades IV–VIII."),
+    AgentEntry("kronikarz-analityczny","Kronikarz Analityczny","agents/school-kronikarz-analityczny/agent.py","History, chronology and source criticism for grades IV–VIII."),
+    AgentEntry("globalny-komunikator","Globalny Komunikator","agents/school-globalny-komunikator/agent.py","Foreign-language learning for grades IV–VIII and second-language foundations."),
+    AgentEntry("straznik-tozsamosci","Strażnik Tożsamości","agents/school-straznik-tozsamosci/agent.py","Minority/regional language, history and culture with bilingual support."),
+    AgentEntry("mistrz-logiki","Mistrz Logiki","agents/school-mistrz-logiki/agent.py","Mathematics for grades IV–VIII with error diagnosis and modeling."),
+    AgentEntry("architekt-cyfrowy","Architekt Cyfrowy","agents/school-architekt-cyfrowy/agent.py","Computing, programming, digital tools and cybersecurity for grades IV–VIII."),
+    AgentEntry("przewodnik-terenowy","Przewodnik Terenowy","agents/school-przewodnik-terenowy/agent.py","Nature, maps, weather and healthy habits for grade IV."),
+    AgentEntry("bio-eksplorator","Bio-Eksplorator","agents/school-bio-eksplorator/agent.py","Biology for grades V–VIII."),
+    AgentEntry("geo-strateg","Geo-Strateg","agents/school-geo-strateg/agent.py","Geography for grades V–VIII."),
+    AgentEntry("laborant-teoretyczny","Laborant Teoretyczny","agents/school-laborant-teoretyczny/agent.py","Chemistry for grades VII–VIII."),
+    AgentEntry("fizyk-fundamentalny","Fizyk Fundamentalny","agents/school-fizyk-fundamentalny/agent.py","Physics for grades VII–VIII."),
+    AgentEntry("wizjoner-estetyczny","Wizjoner Estetyczny","agents/school-wizjoner-estetyczny/agent.py","Visual arts for grades IV–VII."),
+    AgentEntry("maestro-dzwieku","Maestro Dźwięku","agents/school-maestro-dzwieku/agent.py","Music for grades IV–VII."),
+    AgentEntry("inzynier-bezpieczenstwa","Inżynier Bezpieczeństwa","agents/school-inzynier-bezpieczenstwa/agent.py","Technology, road safety and technical drawing for grades IV–VI."),
+    AgentEntry("aktywista-demokratyczny","Aktywista Demokratyczny","agents/school-aktywista-demokratyczny/agent.py","Civics and media literacy for grade VIII."),
+    AgentEntry("coach-dobrostanu","Coach Dobrostanu","agents/school-coach-dobrostanu/agent.py","Health education for school-age learners."),
+    AgentEntry("instruktor-reagowania-kryzysowego","Instruktor Reagowania Kryzysowego","agents/school-instruktor-reagowania-kryzysowego/agent.py","Safety education and first aid for grade VIII."),
+    AgentEntry("trener-teoretyk","Trener Teoretyk","agents/school-trener-teoretyk/agent.py","Physical education theory and healthy activity."),
+    AgentEntry("architekt-kariery","Architekt Kariery","agents/school-architekt-kariery/agent.py","Career guidance for grades VII–VIII."),
+    AgentEntry("mediator-klasowy","Mediator Klasowy","agents/school-mediator-klasowy/agent.py","Class-community support and nonviolent conflict resolution."),
+    AgentEntry("filozof-moralny","Filozof Moralny","agents/school-filozof-moralny/agent.py","Ethics and philosophical reasoning for school learners."),
 )
 
 
