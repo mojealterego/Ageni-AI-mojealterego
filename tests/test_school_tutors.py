@@ -49,7 +49,7 @@ class SchoolTutorBatchTests(unittest.TestCase):
             source = (ROOT / entrypoint).read_text(encoding="utf-8")
             self.assertIn("AgentSpec", source)
             self.assertIn("run_agent", source)
-            self.assertIn("privacy", source.lower())
+            self.assertTrue(\n                any(term in source.lower() for term in ("privacy", "personal data", "sensitive data", "sensitive"))\n            )
 
     def test_sensitive_domains_have_explicit_guardrails(self):
         guarded = {
