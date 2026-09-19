@@ -5,12 +5,12 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **40 agentów portfolio, w tym 6 wyspecjalizowanych agentów badawczo-inżynierskich**: 10 B2B + 10 mobile + 7 monetization + 7 cognitive-safety.
+- **47 agentów portfolio, w tym 12 wyspecjalizowanych agentów badawczo-inżynierskich**: 10 B2B + 10 mobile + 7 monetization + 7 cognitive-safety + 6 Gemini.
 - Wszyscy agenci portfolio są wykonywalni przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
 
-## 40 agentów
+## 47 agentów portfolio / 51 agentów łącznie
 
 | `agent-policy-gateway` | **Agent Policy Gateway** | Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate identity, scope, risk, data sensitivity, policy conflict, approval and audit requirements. |
 | `agent-ops-control-tower` | **Agent Ops Control Tower** | Analyze agent executions, approvals, failures, latency, model usage and cost; separate observed telemetry from inferred causes. |
@@ -46,6 +46,16 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 | `llm-red-team-auditor` | **LLM Red-Team Auditor** | Authorized sandbox assessment of prompt injection, jailbreak resistance and tool/data abuse paths. |
 | `synthetic-media-disinformation-detector` | **Synthetic Media & Disinformation Detector** | Provenance-based assessment of suspected deepfakes, astroturfing and synthetic-consensus signals. |
 | `cognitive-privacy-governance` | **Cognitive Privacy Governance Agent** | Governance for behavioral, biometric and inferred-personality data, including high-risk advertising and political contexts. |
+
+## Batch: Gemini Agent Builder
+
+Raport dotyczący wieloplatformowego kreatora agentów Gemini został przełożony na 6 wykonywalnych agentów: `gemini-agent-builder`, `gemini-desktop-builder`, `gemini-android-builder`, `gemini-edge-rag`, `gemini-security-auditor` oraz `gemini-multiagent-orchestrator`.
+
+Dodano również `agent_runtime/gemini_builder.py` — deterministyczny kompilator blueprintów bez zależności od sieci. Waliduje platformę, tryb pamięci, uprawnienia narzędzi, approval gates i referencje sekretów oraz generuje `manifest.json`, `root_agent.yaml` i szkielety adapterów Python/Kotlin.
+
+Wersje bibliotek i modeli podane w raporcie są traktowane jako dane wejściowe do weryfikacji, a nie jako gwarantowany stan bieżący. Aktualna dokumentacja Google wskazuje Google GenAI SDK jako ścieżkę dla aplikacji Gemini, a ADK obejmuje również agentów Android/Kotlin. Starsze biblioteki są objęte ścieżką migracji.
+Źródła: https://ai.google.dev/gemini-api/docs/migrate
+https://developer.android.com/ai/adk
 
 ## Nowy batch: research, agentic engineering i document intelligence
 
