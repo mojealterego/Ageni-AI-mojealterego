@@ -61,6 +61,13 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("datasheet-spice-model-extractor","Datasheet-to-SPICE Model Agent","agents/datasheet-spice-model-extractor/agent.py","Datasheet parameter extraction and candidate SPICE validation."),
     AgentEntry("godot-gaussian-splatting-integrator","Godot Gaussian Splatting Integrator","agents/godot-gaussian-splatting-integrator/agent.py","Godot Gaussian-Splatting integration and validation."),
     AgentEntry("omnicore-forge","OmniCore Forge","agents/omnicore-forge/agent.py","Private AI infrastructure, nested virtualization, GPU/RAG and Rust kernel engineering with safety gates."),
+
+    AgentEntry("gemini-agent-builder","Gemini Agent Builder","agents/gemini-agent-builder/agent.py","Cross-platform Gemini agent compilation, manifests, adapters and security gates."),
+    AgentEntry("gemini-desktop-builder","Gemini Desktop Builder","agents/gemini-desktop-builder/agent.py","Python/Google GenAI SDK/ADK desktop agent engineering."),
+    AgentEntry("gemini-android-builder","Gemini Android Builder","agents/gemini-android-builder/agent.py","Kotlin/Android Gemini agent construction and lifecycle-safe tooling."),
+    AgentEntry("gemini-edge-rag","Gemini Edge RAG Agent","agents/gemini-edge-rag/agent.py","On-device RAG, provenance, local indexing and cloud fallback controls."),
+    AgentEntry("gemini-security-auditor","Gemini Security Auditor","agents/gemini-security-auditor/agent.py","Security assessment for Gemini builders, tools, MCP and data boundaries."),
+    AgentEntry("gemini-multiagent-orchestrator","Gemini Multi-Agent Orchestrator","agents/gemini-multiagent-orchestrator/agent.py","Bounded delegation, memory, approvals and observability for multi-agent Gemini systems."),
 )
 
 
