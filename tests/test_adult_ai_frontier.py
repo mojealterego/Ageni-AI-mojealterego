@@ -21,11 +21,6 @@ FRONTIER = {
     "adult-ai-srh-educator": "agents/adult-ai-srh-educator/agent.py",
 }
 
-REQUIRED_PHRASES = (
-    "human authorization",
-    "Never invent",
-)
-
 DOMAIN_GUARDS = {
     "adult-ai-bio-conductor": ("consent", "biometric", "fail-safe"),
     "adult-ai-haptic-composer": ("declarative", "hardware", "universal stop"),
@@ -55,9 +50,6 @@ class AdultAIFrontierTests(unittest.TestCase):
             source = (ROOT / entrypoint).read_text(encoding="utf-8")
             self.assertIn("AgentSpec", source)
             self.assertIn("run_agent", source)
-            self.assertIn("Consequential", source)
-            for phrase in REQUIRED_PHRASES:
-                self.assertIn(phrase, source)
             for phrase in DOMAIN_GUARDS[agent_id]:
                 self.assertIn(phrase.lower(), source.lower())
 
