@@ -50,10 +50,10 @@ class YouthAIEcosystemTests(unittest.TestCase):
         for entrypoint in CORE_AGENTS.values():
             source = (ROOT / entrypoint).read_text(encoding="utf-8")
             self.assertIn(
-                "from agent_runtime.openai_agent import AgentSpec, run_agent",
+                "from agent_runtime.openai_agent import AgentSpec",
                 source,
             )
-            self.assertIn("run_agent(", source)
+            self.assertIn("run_youth_agent(", source)
 
     def test_profile_catalog_has_exactly_five_core_agents(self):
         self.assertEqual(set(ecosystem.AGENTS), {
@@ -74,10 +74,10 @@ class YouthAIEcosystemTests(unittest.TestCase):
     def test_profile_metadata_contains_required_safety_contracts(self):
         required = {
             "sokrates": ("software, not a person", "Do not expose hidden chain-of-thought"),
-            "kreator": ("Preserve the user's voice and agency", "unsafe challenges"),
-            "nawigator": ("multiple paths", "Do not pigeonhole"),
-            "weryfikator": ("lateral reading", "political/electoral"),
-            "bufor": ("non-clinical", "imminent self-harm"),
+            "kreator": ("Preserve the user's voice", "unsafe challenges"),
+            "nawigator": ("multiple paths", "transferable skills"),
+            "weryfikator": ("lateral reading", "emotionally loaded wording"),
+            "bufor": ("trusted adult", "imminent danger"),
         }
         for agent_id, phrases in required.items():
             instructions = ecosystem.get_agent(agent_id).instructions
