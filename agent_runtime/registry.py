@@ -82,6 +82,8 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("agent-supervisor-killswitch","Agent Supervisor & Kill Switch","agents/agent-supervisor-killswitch/agent.py","External policy proxy, hard budgets, anomaly detection, kill switch and bounded recovery for autonomous agents."),
     AgentEntry("realtime-crisis-manager","Real-Time Crisis Manager","agents/realtime-crisis-manager/agent.py","Event-driven crisis architecture with low-latency deterministic controls and bounded model-based analysis."),
     AgentEntry("agent-evaluation-ops","Agent Evaluation Ops","agents/agent-evaluation-ops/agent.py","AgentOps evaluation, golden datasets, judge calibration, drift detection and CI/CD circuit breakers."),
+    AgentEntry("adult-ai-companion-architect","Adult AI Companion Architect","agents/adult-ai-companion-architect/agent.py","Architecture, privacy, consent, safety and evaluation for adult-oriented AI companion software."),
+    AgentEntry("child-ai-safety-architect","Child AI Safety Architect","agents/child-ai-safety-architect/agent.py","Child-directed AI safety, age-appropriate UX, privacy, parental controls, abuse resistance and evaluation."),
 )
 
 
