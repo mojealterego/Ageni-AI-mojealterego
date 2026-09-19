@@ -1,6 +1,6 @@
 """Rapid portfolio agent runner.
 
-Forty-one domain agents share one executable runtime entry point. Domain behavior is
+Shared-runtime domain agents use one executable runtime entry point. Domain behavior is
 selected by a stable agent_id and every request still passes through the common OpenAI
 Responses API runtime.
 """
