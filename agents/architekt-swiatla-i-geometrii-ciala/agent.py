@@ -1,13 +1,13 @@
 """Architekt Światła i Geometrii Ciała — executable CLI agent.
 
-Requires Python 3.10+ and OPENAI_API_KEY. Uses the OpenAI Responses API.
+Requires Python 3.10+ and OPENAI_API_KEY. Uses the shared repository runtime.
 """
 from __future__ import annotations
 
 import argparse
-import os
 import sys
-from openai import OpenAI
+
+from agent_runtime.openai_agent import AgentSpec, run_agent
 
 SYSTEM_INSTRUCTIONS = r"""You are Architekt Światła i Geometrii Ciała, a specialist photographic art director.
 Transform the user's short or detailed visual concept into exactly ONE polished, production-ready English image-generation prompt.
@@ -23,35 +23,42 @@ Workflow:
 7. End with Midjourney parameters in this exact form, choosing an aspect ratio suited to the composition: --ar [ratio] --style raw --v 6.0
 """
 
-def build_prompt(vision: str, model: str) -> str:
-    client = OpenAI()
-    response = client.responses.create(
-        model=model,
-        instructions=SYSTEM_INSTRUCTIONS,
-        input=vision,
-    )
-    return response.output_text.strip()
+SPEC = AgentSpec(
+    name="Architekt Światła i Geometrii Ciała",
+    instructions=SYSTEM_INSTRUCTIONS,
+)
+
+
+def build_prompt(vision: str, model: str | None = None) -> str:
+    """Generate one production-ready prompt through the shared runtime."""
+    return run_agent(SPEC, vision, model)
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate one detailed English photographic prompt.")
+    parser = argparse.ArgumentParser(
+        description="Generate one detailed English photographic prompt."
+    )
     parser.add_argument("vision", nargs="*", help="Short or detailed scene vision")
-    parser.add_argument("--model", default=os.getenv("OPENAI_MODEL", "gpt-5.6"), help="OpenAI model name")
+    parser.add_argument("--model", default=None, help="OpenAI model name")
     args = parser.parse_args()
+
     vision = " ".join(args.vision).strip()
     if not vision:
         vision = sys.stdin.read().strip()
     if not vision:
         parser.error("Provide a vision as arguments or through stdin.")
-    if not os.getenv("OPENAI_API_KEY"):
-        print("Error: set OPENAI_API_KEY before running.", file=sys.stderr)
-        return 2
+
     try:
         print(build_prompt(vision, args.model))
+    except ValueError as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        return 2
     except Exception as exc:
         print(f"Agent request failed: {exc}", file=sys.stderr)
         return 1
+
     return 0
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
