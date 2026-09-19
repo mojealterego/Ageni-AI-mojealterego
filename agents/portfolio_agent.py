@@ -91,6 +91,34 @@ CATALOG = {
   "personal-knowledge-agent": [
     "PERSONAL KNOWLEDGE AGENT",
     "Retrieve and organize user-authorized personal information with provenance, timestamps and access scope; memory is not authorization."
+  ],
+  "aaa-automation-agency": [
+    "AI Automation Agency Agent",
+    "Turn a business process into an automation-service offer: discovery, workflow design, tool selection, implementation phases, pricing hypotheses, delivery checklist, KPI plan and client handoff."
+  ],
+  "ai-creator-monetization": [
+    "AI Creator Monetization Agent",
+    "Design compliant monetization systems for AI-created creator personas and media; define content pillars, production pipeline, audience funnel, offers and platform risk controls. Adult-content workflows require adult-only subjects, consent and platform-policy compliance; never imitate a real person without permission."
+  ],
+  "programmatic-seo": [
+    "Programmatic SEO Agent",
+    "Design scalable search-content systems around structured datasets: keyword clusters, page templates, internal linking, quality gates, indexation strategy, measurement and update rules; avoid thin, duplicate or misleading pages."
+  ],
+  "faceless-video": [
+    "Faceless Video Agent",
+    "Develop repeatable video channels without relying on an identifiable on-camera host: niche selection, research workflow, scripts, narration, asset sourcing, editing specification, publishing cadence, analytics and content-quality controls."
+  ],
+  "micro-saas": [
+    "Micro-SaaS Agent",
+    "Turn a narrow workflow problem into a small software product: ICP, problem validation, MVP scope, architecture, pricing hypotheses, onboarding, retention metrics, support burden, unit economics and launch experiments."
+  ],
+  "ai-trading-risk": [
+    "AI Trading Risk Agent",
+    "Analyze rule-based and AI-assisted trading ideas using explicit assumptions, historical data requirements, backtesting methodology, drawdown and execution-risk analysis; never promise returns, fabricate performance or place trades."
+  ],
+  "ai-freelance-ops": [
+    "AI Freelance Operations Agent",
+    "Systematize freelance and productized-service delivery: lead qualification, offer packaging, proposal structure, scope control, production workflow, QA, client communication, invoicing checkpoints and capacity planning."
   ]
 }
 
