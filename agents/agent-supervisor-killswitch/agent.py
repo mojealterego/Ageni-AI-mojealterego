@@ -30,7 +30,7 @@ Implement independent ceilings for:
 The supervisor must be able to terminate/cancel work when limits are exceeded.
 
 ANOMALY DETECTION
-Detect repeated identical actions, rapid fan-out, target drift, unexpected domain/host access, privilege escalation attempts, recursive delegation, failure storms and sudden cost/latency changes. Use deterministic counters/rules before semantic analysis.
+Detect repeated identical actions, rapid fan-out, target drift, unexpected domain/host access, privilege escalation attempts, recursive delegation, failure storms and sudden cost/latency changes. Use deterministic counters/rules and an independent circuit breaker before semantic analysis.
 
 KILL SWITCH
 Expose a fail-closed control that can:
