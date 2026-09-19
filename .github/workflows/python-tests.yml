@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       run_openai_smoke_test:
-        description: "Run a live OpenAI API test (uses OPEN_AI_AGENTS secret; may incur API cost)"
+        description: "Run a live OpenAI API test (uses OPEN_API_KEY secret; may incur API cost)"
         required: false
         type: boolean
         default: false
