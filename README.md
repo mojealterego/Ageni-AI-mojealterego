@@ -5,12 +5,12 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **34 nowych agentów portfolio**: 10 B2B + 10 mobile + 7 monetization + 7 cognitive-safety.
-- Wszystkie 27 są wykonywalne przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
+- **39 agentów portfolio, w tym 5 wyspecjalizowanych agentów badawczo-inżynierskich**: 10 B2B + 10 mobile + 7 monetization + 7 cognitive-safety.
+- Wszyscy agenci portfolio są wykonywalni przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
 
-## 34 agentów
+## 39 agentów
 
 | `agent-policy-gateway` | **Agent Policy Gateway** | Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate identity, scope, risk, data sensitivity, policy conflict, approval and audit requirements. |
 | `agent-ops-control-tower` | **Agent Ops Control Tower** | Analyze agent executions, approvals, failures, latency, model usage and cost; separate observed telemetry from inferred causes. |
@@ -46,6 +46,10 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 | `llm-red-team-auditor` | **LLM Red-Team Auditor** | Authorized sandbox assessment of prompt injection, jailbreak resistance and tool/data abuse paths. |
 | `synthetic-media-disinformation-detector` | **Synthetic Media & Disinformation Detector** | Provenance-based assessment of suspected deepfakes, astroturfing and synthetic-consensus signals. |
 | `cognitive-privacy-governance` | **Cognitive Privacy Governance Agent** | Governance for behavioral, biometric and inferred-personality data, including high-risk advertising and political contexts. |
+
+## Nowy batch: research, agentic engineering i document intelligence
+
+Pięć tematów z kolejnego pakietu zostało przełożonych na osobne wykonywalne entrypointy: `causal-systems-research`, `ai-coding-workflow-engineer`, `pdf-rag-quality`, `datasheet-spice-model-extractor` oraz `godot-gaussian-splatting-integrator`. Każdy ma własny kontrakt operacyjny i może zostać później podpięty do adapterów narzędziowych.
 
 ## Nowy batch: monetyzacja AI
 
