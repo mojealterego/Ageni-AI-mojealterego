@@ -88,7 +88,7 @@ The child-AI domain now has the two architectural agents plus ten specialist age
 ### Adult AI — 13 agents
 The adult-AI domain now has the companion architect plus twelve specialist agents: safety, consent/boundaries, memory, persona/character, proactive messaging, multimodal, voice, intimate privacy, content moderation, evaluation, anti-impersonation and operations.
 
-The repository therefore registers **97 agents total**: the existing 68 plus 29 child/adult specialist agents, including the Horizon 2030 extension. The new agents are executable entrypoints, wired into the static registry and covered by compile/integration tests. They provide architecture and evaluation cores; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
+The repository currently contains **129 registered agents**. The child/adult domains account for **41 entries** (12 child-AI + 29 adult-AI), and the Horizon 2030 extension in this batch adds 7 adult-AI agents. The new agents are executable entrypoints, wired into the static registry and covered by compile/integration tests. They provide architecture and evaluation cores; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
 
 ## Batch: Adult AI — Horizon 2030 relationship, logistics and legacy extension
 
