@@ -25,7 +25,7 @@ EXPECTED = {
 }
 
 class PortfolioBatchTests(unittest.TestCase):
-    def test_all_41_registered(self):
+    def test_all_portfolio_and_gemini_registered(self):
         registered = {entry.agent_id for entry in list_agents()}
         self.assertTrue(EXPECTED.issubset(registered))
 
@@ -53,7 +53,7 @@ class PortfolioBatchTests(unittest.TestCase):
 
     def test_shared_entrypoint_exists(self):
         matches = [e for e in existing_entrypoints() if e.agent_id in EXPECTED]
-        self.assertEqual(len(matches), 41)
+        self.assertEqual(len(matches), 47)
 
     def test_shared_entrypoint_compiles(self):
         py_compile.compile(str(ROOT / "agents/portfolio_agent.py"), doraise=True)
