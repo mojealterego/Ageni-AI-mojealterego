@@ -5,12 +5,12 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **47 agentów portfolio, w tym 12 wyspecjalizowanych agentów badawczo-inżynierskich**: 10 B2B + 10 mobile + 7 monetization + 7 cognitive-safety + 6 Gemini.
+- **47 agentów portfolio + 21 wyspecjalizowanych = 68 agentów w rejestrze**. Wśród wyspecjalizowanych są batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps oraz child-AI.
 - Wszyscy agenci portfolio są wykonywalni przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
 
-## 47 agentów portfolio / 51 agentów łącznie
+## 47 agentów portfolio / 68 agentów w rejestrze
 
 | `agent-policy-gateway` | **Agent Policy Gateway** | Decide ALLOW, REVIEW or DENY for proposed agent actions; evaluate identity, scope, risk, data sensitivity, policy conflict, approval and audit requirements. |
 | `agent-ops-control-tower` | **Agent Ops Control Tower** | Analyze agent executions, approvals, failures, latency, model usage and cost; separate observed telemetry from inferred causes. |
@@ -73,6 +73,12 @@ Raport o profilowaniu psychometrycznym, affective AI, perswazji, dark patterns, 
 
 
 Modele przychodowe są traktowane jako hipotezy do walidacji przez koszty, KPI i unit economics — bez gwarantowania wyniku finansowego.
+
+## Batch: Child AI — bezpieczeństwo, edukacja i robotyka
+
+Raport o autonomicznych agentach AI dla dzieci został przełożony na dwa wyspecjalizowane agenty: `child-ai-safety-architect` oraz `child-ai-ecosystem-architect`. Pierwszy skupia się na bezpieczeństwie, prywatności, kontroli rodzicielskiej, pamięci, nadużyciach i bezpieczeństwie fizycznym; drugi łączy architekturę tutorów, companionów, robotów, zabawek generatywnych i systemów monitoringu z modelem zagrożeń, przepływem danych, testami regresyjnymi i kill-switchem.
+
+Raportowe twierdzenia o konkretnych produktach, cenach, językach, modelach, certyfikacjach i praktykach przetwarzania danych są traktowane jako hipotezy do weryfikacji. Agenty nie zakładają skuteczności terapeutycznej, diagnozowania ani gwarantowanej prewencji medycznej; wymagają aktualnych źródeł i przeglądu właściwego dla jurysdykcji.
 
 ## Uruchomienie
 
