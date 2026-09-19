@@ -6,9 +6,22 @@ import unittest
 from pathlib import Path
 
 from agent_runtime.registry import find_agent, list_agents
-from agents.youth_ai_ecosystem import agent as ecosystem
+import importlib.util
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def load_ecosystem_module():
+    path = ROOT / "agents/youth-ai-ecosystem/agent.py"
+    spec = importlib.util.spec_from_file_location("youth_ai_ecosystem_agent", path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError("Unable to load youth ecosystem profile module")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+ecosystem = load_ecosystem_module()
 
 CORE_AGENTS = {
     "youth-ai-socrates-tutor": "agents/youth-ai-socrates-tutor/agent.py",
