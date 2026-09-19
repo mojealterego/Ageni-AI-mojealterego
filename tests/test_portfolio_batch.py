@@ -64,7 +64,7 @@ class PortfolioBatchTests(unittest.TestCase):
 
     def test_agent_forge_has_implementation_contract(self):
         instructions = build_instructions("agent-forge")
-        for phrase in ("executable agent", "code-level changes", "tests", "provenance", "promotion"):
+        for phrase in ("executable-agent", "code-level changes", "tests", "provenance", "promotion"):
             self.assertIn(phrase, instructions)
 
     def test_new_cognitive_safety_agents_have_guardrails(self):
