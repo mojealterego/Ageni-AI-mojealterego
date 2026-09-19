@@ -42,13 +42,13 @@ class YouthAIBatchTests(unittest.TestCase):
     def test_domain_guardrails_are_present(self):
         guards = {
             "youth-ai-fintech-guardian": ("financial literacy", "do not encourage gambling", "credentials"),
-            "youth-ai-bio-optimizer": ("do not diagnose", "do not diagnose", "weight-loss"),
+            "youth-ai-bio-optimizer": ("do not diagnose", "weight-loss"),
             "youth-ai-digital-stylist": ("do not rate bodies", "sustainable", "identifying photos"),
             "youth-ai-esports-strategist": ("covertly", "cheating", "healthy play-life balance"),
             "youth-ai-agor-civic": ("neutral factual context", "do not target or manipulate", "political"),
             "youth-ai-spiritual-compass": ("without imposing religion", "astrology", "supernatural certainty"),
             "youth-ai-hype-curator": ("authenticity", "guarantee future price increases", "payment credentials"),
-            "youth-ai-energy-regulator": ("do not diagnose", "hidden calendar", "user control"),
+            "youth-ai-energy-regulator": ("do not diagnose", "hidden calendar", "keeping the user in control"),
             "youth-ai-meme-historian": ("verified origins", "harass", "media literacy"),
             "youth-ai-safe-party-planner": ("without alcohol", "recreational drugs", "safe arrival and return"),
             "youth-ai-parasocial-manager": ("do not diagnose", "impersonate a creator", "offline relationships"),
