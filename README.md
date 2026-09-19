@@ -5,7 +5,7 @@ Repozytorium agentów AI z jednym wspólnym runtime'em i batchowym katalogiem do
 ## Aktualny stan
 
 - 4 wcześniejsze entrypointy: fotografia, matematyka, Architekt Światła i Geometrii Ciała.
-- **180 agentów w rejestrze**. Wśród nich są agenty portfolio, batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps, Child AI, Adult AI oraz nowy batch Youth AI.
+- **191 agentów w rejestrze**. Wśród nich są agenty portfolio, batch'e badawczo-inżynierskie, Gemini, infrastruktura, game/dev, compliance, AgentOps, Child AI, Adult AI oraz nowy batch Youth AI.
 - Wszyscy agenci portfolio są wykonywalni przez wspólny entrypoint `agents/portfolio_agent.py` i stabilny `--agent-id`.
 - Wspólny runtime używa OpenAI Responses API.
 - Obecny batch dostarcza **rdzeń reasoning/planning**. Nie udaje jeszcze integracji z ERP, pocztą, bankiem, Android AppFunctions itp. bez odpowiednich adapterów, uprawnień i weryfikacji postcondition.
@@ -88,7 +88,7 @@ The child-AI domain now has the two architectural agents plus ten specialist age
 ### Adult AI — 13 agents
 The adult-AI domain now has the companion architect plus twelve specialist agents: safety, consent/boundaries, memory, persona/character, proactive messaging, multimodal, voice, intimate privacy, content moderation, evaluation, anti-impersonation and operations.
 
-The repository currently contains **180 registered agents**. The registry is the source of truth for executable entrypoints. The latest additions include the complete Youth AI specialist batch below; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
+The repository currently contains **191 registered agents**. The registry is the source of truth for executable entrypoints. The latest additions include the complete Youth AI specialist batch below; provider integrations, paid actions and external side effects remain gated by permissions, approvals and postcondition verification.
 
 ## Batch: Youth AI — core development ecosystem
 
@@ -167,6 +167,18 @@ Raport SAAD dla polskiej szkoły podstawowej został przełożony na **23 wyspec
 `mentor-odkrywcow`, `playful-polyglot`, `kustosz-slowa`, `kronikarz-analityczny`, `globalny-komunikator`, `straznik-tozsamosci`, `mistrz-logiki`, `architekt-cyfrowy`, `przewodnik-terenowy`, `bio-eksplorator`, `geo-strateg`, `laborant-teoretyczny`, `fizyk-fundamentalny`, `wizjoner-estetyczny`, `maestro-dzwieku`, `inzynier-bezpieczenstwa`, `aktywista-demokratyczny`, `coach-dobrostanu`, `instruktor-reagowania-kryzysowego`, `trener-teoretyk`, `architekt-kariery`, `mediator-klasowy` oraz `filozof-moralny`.
 
 Każdy agent ma własny entrypoint pod `agents/school-*/agent.py`, korzysta ze wspólnego runtime'u `AgentSpec/run_agent` i jest zarejestrowany w `agent_runtime/registry.py`. Pakiet ma osobny test integracyjny `tests/test_school_tutors.py` sprawdzający rejestrację, zgodność ścieżek, kompilację oraz kontrakty bezpieczeństwa. Dla treści aktualnych prawnie lub programowo agent ma wymagać bieżących źródeł zamiast traktować raport jako niezmienny stan prawa.
+
+
+
+## Batch: Vocational and Technical School Tutors
+
+Raport dotyczący autonomicznych korepetytorów dla polskiego szkolnictwa zawodowego i technicznego został przełożony na **11 wykonywalnych agentów**:
+
+`vocational-polonista`, `vocational-matematyk`, `vocational-jezyk-zawodowy`, `vocational-sysadmin-inf02`, `vocational-web-inf03`, `vocational-mechanik-cnc`, `vocational-budownictwo`, `vocational-ekonomista`, `vocational-gastronomia`, `vocational-biznes-mentor` oraz `vocational-edb`.
+
+Każdy agent ma osobny entrypoint pod `agents/vocational-*/agent.py`, korzysta ze wspólnego `AgentSpec/run_agent` i jest zarejestrowany w `agent_runtime/registry.py`. Pakiet ma również zunifikowany runner `agents/vocational-ai-ecosystem/runner.py` oraz test integracyjny `tests/test_vocational_tutors.py`.
+
+Kontrakty dydaktyczne obejmują scaffolding i academic-integrity controls, źródłową weryfikację aktualnych wymagań programu/egzaminu oraz dodatkowe guardraile dla cyberbezpieczeństwa, CNC, budownictwa, księgowości, gastronomii i pierwszej pomocy. Raport nie jest traktowany jako niezmienny stan prawa, podstawy programowej, stawek podatkowych, norm technicznych ani wytycznych medycznych.
 
 
 ## Youth AI — deployment validation
