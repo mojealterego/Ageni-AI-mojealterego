@@ -106,6 +106,15 @@ AGENTS: tuple[AgentEntry, ...] = (
     AgentEntry("adult-ai-ludonarrative-weaver","Ludonarrative Weaver","agents/adult-ai-ludonarrative-weaver/agent.py","Stateful adult RPG and interactive-fiction design with explicit boundaries and reset controls."),
     AgentEntry("adult-ai-srh-educator","Adult SRH Educator","agents/adult-ai-srh-educator/agent.py","Evidence-oriented sexual and reproductive health education with adult age-gating and clinical boundaries."),
 
+    # Adult AI Horizon 2030 extension
+    AgentEntry("adult-ai-arm-mediator","Autonomous Relationship Mediator","agents/adult-ai-arm-mediator/agent.py","Consent-first relationship mediation support without covert monitoring or autonomous communication changes."),
+    AgentEntry("adult-ai-bio-narrative-orchestrator","Bio-Narrative Orchestrator","agents/adult-ai-bio-narrative-orchestrator/agent.py","Consent-aware narrative planning with physiological uncertainty and deterministic safety boundaries."),
+    AgentEntry("adult-ai-ple-polykule","PLE — Polykule Logistics Engine","agents/adult-ai-ple-polykule/agent.py","Multi-adult relationship logistics with participant-specific permissions, boundaries and approval gates."),
+    AgentEntry("adult-ai-cyrano-social-vetting","Cyrano — Social Vetting","agents/adult-ai-cyrano-social-vetting/agent.py","Evidence-first social vetting without face-based age inference, diagnosis or covert surveillance."),
+    AgentEntry("adult-ai-detachment","Detachment Agent","agents/adult-ai-detachment/agent.py","Autonomy-supportive post-breakup boundary planning without impersonation or covert monitoring."),
+    AgentEntry("adult-ai-bdsm-task-manager","BDSM Task Manager","agents/adult-ai-bdsm-task-manager/agent.py","Consent-first adult task and boundary planning without physical-device control or coercive enforcement."),
+    AgentEntry("adult-ai-legacy-archivist","Legacy Archivist","agents/adult-ai-legacy-archivist/agent.py","Consent-controlled personal and family memory archiving with provenance, review and deletion controls."),
+
     # Child AI specialist batch
     AgentEntry("child-ai-education-agent","Child AI Education Agent","agents/child-ai-education-agent/agent.py","Age-appropriate tutoring, curriculum alignment and academic-integrity controls."),
     AgentEntry("child-ai-sel-agent","Child AI Social-Emotional Learning Agent","agents/child-ai-sel-agent/agent.py","Non-clinical SEL interactions with developmental and escalation boundaries."),
