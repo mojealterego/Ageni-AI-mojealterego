@@ -24,6 +24,19 @@ EXPECTED = {
     "gemini-edge-rag", "gemini-security-auditor", "gemini-multiagent-orchestrator",
 }
 
+CHILD_ADULT_SPECIALIZED = {
+    "adult-ai-companion-architect", "adult-ai-safety-agent", "adult-ai-consent-agent",
+    "adult-ai-memory-agent", "adult-ai-persona-agent", "adult-ai-proactive-agent",
+    "adult-ai-multimodal-agent", "adult-ai-voice-agent", "adult-ai-privacy-agent",
+    "adult-ai-content-moderation-agent", "adult-ai-evaluation-agent",
+    "adult-ai-anti-impersonation-agent", "adult-ai-operations-agent",
+    "child-ai-safety-architect", "child-ai-ecosystem-architect",
+    "child-ai-education-agent", "child-ai-sel-agent", "child-ai-language-agent",
+    "child-ai-robotics-agent", "child-ai-toy-agent", "child-ai-monitoring-agent",
+    "child-ai-parental-control-agent", "child-ai-privacy-agent", "child-ai-evaluation-agent",
+    "child-ai-content-moderation-agent",
+}
+
 class PortfolioBatchTests(unittest.TestCase):
     def test_all_portfolio_and_gemini_registered(self):
         registered = {entry.agent_id for entry in list_agents()}
@@ -142,3 +155,14 @@ class PortfolioBatchTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+    def test_complete_child_and_adult_specialist_batch_registered(self):
+        registered = {entry.agent_id for entry in list_agents()}
+        self.assertTrue(CHILD_ADULT_SPECIALIZED.issubset(registered))
+        registry = {e.agent_id: e.entrypoint for e in list_agents()}
+        for agent_id in CHILD_ADULT_SPECIALIZED:
+            source = (ROOT / registry[agent_id]).read_text(encoding="utf-8")
+            self.assertIn("Consequential actions need explicit human authorization", source)
+            self.assertIn("Never invent", source)
+            py_compile.compile(str(ROOT / registry[agent_id]), doraise=True)
