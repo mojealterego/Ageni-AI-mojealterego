@@ -15,7 +15,7 @@ def main() -> int:
 
         client = OpenAI(api_key=api_key, timeout=30.0, max_retries=0)
         response = client.responses.create(
-            model="gpt-5.0",
+            model="gpt-4.1-mini",
             input="Reply with exactly: API connection OK",
             max_output_tokens=32,
         )
